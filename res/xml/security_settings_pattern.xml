@@ -28,6 +28,16 @@
             android:summary="@string/unlock_set_unlock_mode_pattern"
             settings:keywords="@string/keywords_lockscreen" />
 
+        <SwitchPreference
+            android:key="visible_error_pattern"
+            android:persistent="false"
+            android:title="@string/lockpattern_settings_enable_error_path_title"/>
+
+        <SwitchPreference
+            android:key="visibledots"
+            android:persistent="false"
+            android:title="@string/lockpattern_settings_enable_dots_title"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

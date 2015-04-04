@@ -90,6 +90,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_UNLOCK_SET_OR_CHANGE = "unlock_set_or_change";
     private static final String KEY_UNLOCK_SET_OR_CHANGE_PROFILE = "unlock_set_or_change_profile";
     private static final String KEY_VISIBLE_PATTERN_PROFILE = "visiblepattern_profile";
+    private static final String KEY_VISIBLE_ERROR_PATTERN = "visible_error_pattern";
+    private static final String KEY_VISIBLE_DOTS = "visibledots";
     private static final String KEY_SECURITY_CATEGORY = "security_category";
     private static final String KEY_DEVICE_ADMIN_CATEGORY = "device_admin_category";
     private static final String KEY_ADVANCED_SECURITY = "advanced_security";
@@ -123,7 +125,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = {
             KEY_SHOW_PASSWORD, KEY_TOGGLE_INSTALL_APPLICATIONS, KEY_UNIFICATION,
-            KEY_VISIBLE_PATTERN_PROFILE
+            KEY_VISIBLE_PATTERN_PROFILE, KEY_VISIBLE_ERROR_PATTERN, KEY_VISIBLE_DOTS
     };
 
     // Only allow one trust agent on the platform.
@@ -141,6 +143,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
     private SwitchPreference mVisiblePatternProfile;
     private SwitchPreference mUnifyProfile;
+    private SwitchPreference mVisibleErrorPattern;
+    private SwitchPreference mVisibleDots;
 
     private SwitchPreference mShowPassword;
 
@@ -281,6 +285,13 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
         // Add options for device encryption
         mIsAdmin = mUm.isAdminUser();
+
+	// visible error pattern
+        mVisibleErrorPattern = (SwitchPreference) root.findPreference(
+                KEY_VISIBLE_ERROR_PATTERN);
+
+        // visible dots
+        mVisibleDots = (SwitchPreference) root.findPreference(KEY_VISIBLE_DOTS);
 
         if (mIsAdmin) {
             if (LockPatternUtils.isDeviceEncryptionEnabled()) {
@@ -614,9 +625,16 @@ public class SecuritySettings extends SettingsPreferenceFragment
         // depend on others...
         createPreferenceHierarchy();
 
+	final LockPatternUtils lockPatternUtils = mChooseLockSettingsHelper.utils();
         if (mVisiblePatternProfile != null) {
             mVisiblePatternProfile.setChecked(mLockPatternUtils.isVisiblePatternEnabled(
                     mProfileChallengeUserId));
+        }
+        if (mVisibleErrorPattern != null) {
+            mVisibleErrorPattern.setChecked(lockPatternUtils.isShowErrorPath(MY_USER_ID));
+        }
+        if (mVisibleDots != null) {
+            mVisibleDots.setChecked(lockPatternUtils.isVisibleDotsEnabled(MY_USER_ID));
         }
 
         updateUnificationPreference();
@@ -810,6 +828,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     ununifyLocks();
                 }
             }
+	} else if (KEY_VISIBLE_ERROR_PATTERN.equals(key)) {
+	    lockPatternUtils.setShowErrorPath((Boolean) value, MY_USER_ID);
+	} else if (KEY_VISIBLE_DOTS.equals(key)) {
+	    lockPatternUtils.setVisibleDotsEnabled((Boolean) value, MY_USER_ID);
         } else if (KEY_SHOW_PASSWORD.equals(key)) {
             Settings.System.putInt(getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD,
                     ((Boolean) value) ? 1 : 0);
