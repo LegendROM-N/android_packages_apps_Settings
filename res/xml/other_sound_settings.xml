@@ -92,4 +92,10 @@
             android:title="@string/screenshot_sound_title"
             android:defaultValue="true" />
 
+    <!-- Camera shutter sound -->
+    <SwitchPreference
+            android:key="camera_sounds"
+            android:title="@string/camera_sounds_title"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
