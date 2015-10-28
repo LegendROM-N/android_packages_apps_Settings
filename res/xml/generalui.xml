@@ -31,8 +31,10 @@
             android:persistent="false" />
 
     <!-- Expanded desktop -->
-    <org.cyanogenmod.internal.cmparts.CMPartsPreference
-    	    android:key="expanded_desktop_settings"
-	    android:icon="@drawable/rr_expanded_desktop_icon" />
+    <PreferenceScreen
+            android:key="expanded_desktop"
+            android:fragment="com.android.settings.Legend.ExpandedDesktop"
+            android:icon="@drawable/rr_expanded_desktop_icon"
+            android:title="@string/expanded_desktop_category" />
 
 </PreferenceScreen>
