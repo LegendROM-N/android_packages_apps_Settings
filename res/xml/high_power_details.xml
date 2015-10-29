@@ -23,4 +23,9 @@
         android:summary="@string/high_power_desc"
         android:title="@string/high_power_apps" />
 
+    <com.gzr.teslacoil.preference.SystemSettingSwitchPreference
+        android:key="force_expanded_notifications"
+        android:title="@string/force_expanded_notifications_title"
+        android:summary="@string/force_expanded_notifications_summary" />
+
 </PreferenceScreen>

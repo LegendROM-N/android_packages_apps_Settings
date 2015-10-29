@@ -24,9 +24,10 @@ public class StatusBar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "StatusBar";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
+    private static final String FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
 
     private ListPreference mSmartPulldown;
-
+    private SwitchPreference mForceExpanded;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,13 @@ public class StatusBar extends SettingsPreferenceFragment implements
                 Settings.System.QS_SMART_PULLDOWN, 0);
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
+
+	mForceExpanded = (SwitchPreference) findPreference(FORCE_EXPANDED_NOTIFICATIONS);
+        mForceExpanded.setOnPreferenceChangeListener(this);
+        int ForceExpanded = Settings.System.getInt(getContentResolver(),
+                FORCE_EXPANDED_NOTIFICATIONS, 0);
+        mForceExpanded.setChecked(ForceExpanded != 0);
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -51,6 +59,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
             int smartPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
+            return true;
+	} else if (preference == mForceExpanded) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), FORCE_EXPANDED_NOTIFICATIONS,
+                    value ? 1 : 0);
             return true;
 	}
 	return false;
