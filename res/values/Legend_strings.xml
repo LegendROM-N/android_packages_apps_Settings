@@ -76,4 +76,7 @@
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
 
+    <string name="double_tap_sleep_anywhere_title">Tap lockscreen to sleep</string>
+    <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on lockscreen to put device to sleep</string>
+
 </resources>
