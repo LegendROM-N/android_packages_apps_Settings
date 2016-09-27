@@ -30,4 +30,15 @@
         android:summary="@string/disable_immersive_message_summary"
         android:persistent="false" />
 
+    <PreferenceCategory
+        android:key="quicksettings_category"
+        android:title="@string/quicksettings_category">
+
+    <com.android.settings.Legend.preference.SecureSettingSwitchPreference
+        android:key="qs_show_brightness"
+        android:title="@string/show_brightness"
+        android:defaultValue="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
