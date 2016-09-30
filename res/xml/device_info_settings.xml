@@ -94,6 +94,12 @@
                 android:shouldDisableView="false"
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
+	
+	<!-- LegendROM version -->
+        <Preference android:key="LegendROM_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/LegendROM_version"
+                android:summary="@string/LegendROM_version_default" />
 
         <!-- Mod version -->
         <Preference android:key="mod_version"
