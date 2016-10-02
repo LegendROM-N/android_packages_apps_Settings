@@ -148,6 +148,12 @@
         android:title="@string/show_brightness"
         android:defaultValue="true" />
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+       	android:key="qs_show_brightness_icon"
+        android:title="@string/brightness_icon_title"
+        android:summary="@string/brightness_icon_summary"
+        android:defaultValue="false"/>
+
     <com.android.settings.Legend.preference.SecureSettingSwitchPreference
         android:key="qs_easy_toggle"
         android:title="@string/qs_easy_toggle_title"
