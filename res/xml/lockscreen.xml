@@ -13,6 +13,11 @@
     	android:defaultValue="true" />
 
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="lockscreen_quick_unlock_control"
+        android:title="@string/unlock_quick_unlock_control_title"
+        android:summary="@string/unlock_quick_unlock_control_summary" />
+
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="lockscreen_charging_current"
         android:title="@string/lockscreen_charging_current_title"
         android:summary="@string/lockscreen_charging_current_summary"
