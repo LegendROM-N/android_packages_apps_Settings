@@ -11,6 +11,10 @@
             android:title="@string/advanced_reboot_title"
             android:summary="@string/advanced_reboot_summary" />
 
+    <com.android.settings.display.DensityPreference
+            android:key="density"
+            android:title="@string/developer_smallest_width" />
+
     <SwitchPreference
             android:key="show_cpu_info"
             android:title="@string/show_cpu_info"
