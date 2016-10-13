@@ -229,6 +229,9 @@
 
     <string name="ok">OK</string>
 
+    <!-- Volume settings - Volume adjustment sound -->
+    <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>
+
     <!-- Sizes for pattern lockscreen -->
     <string name="lock_pattern_size_3">3x3</string>
     <string name="lock_pattern_size_4">4x4</string>
@@ -285,5 +288,8 @@
     <string name="LegendROM_version_default">Unknown</string>
 
     <string name="LegendROM_title">LegendROM</string>
+
+    <!-- title for lock screen weather preference -->
+    <string name="lockscreen_weather_enabled_title">Show weather</string>
 
 </resources>
