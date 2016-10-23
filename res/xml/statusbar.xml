@@ -19,6 +19,11 @@
         android:summary="@string/network_traffic_summary"
         android:title="@string/network_traffic_title" />
 
+    <PreferenceScreen
+        android:key="lr_ticker"
+        android:fragment="com.android.settings.Legend.Ticker"
+        android:title="@string/ticker_screen_title" />
+
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
     	android:key="bluetooth_show_battery"
         android:title="@string/bluetooth_battery_title"
