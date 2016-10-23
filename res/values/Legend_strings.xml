@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- Legend custom settings main -->
+    <string name="Legend_activity_title">Legend Settings</string>
+    <string name="Legend_title">Legend Tweaks</string>
+    <string name="Legend_settings_title">Categories</string>
+
+</resources>
