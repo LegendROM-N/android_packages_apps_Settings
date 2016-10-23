@@ -2543,7 +2543,7 @@
 	<!-- Legend settings activity. -->
         <activity android:name="Settings$LegendSettingsActivity"
                 android:label="@string/Legend_activity_title"
-                android:icon="@drawable/ic_Legend_exposed">
+                android:icon="@drawable/ic_legend_exposed">
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.action.SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
