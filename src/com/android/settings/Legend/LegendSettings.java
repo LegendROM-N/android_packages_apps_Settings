@@ -31,11 +31,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.android.settings.nuclear.tabs.GeneralUI;
-import com.android.settings.nuclear.tabs.LockScreen;
-import com.android.settings.nuclear.tabs.StatusBar;
-import com.android.settings.nuclear.tabs.System;
-import com.android.settings.nuclear.PagerSlidingTabStrip;
+import com.android.settings.Legend.tabs.GeneralUI;
+import com.android.settings.Legend.tabs.LockScreen;
+import com.android.settings.Legend.tabs.StatusBar;
+import com.android.settings.Legend.tabs.System;
+import com.android.settings.Legend.PagerSlidingTabStrip;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
