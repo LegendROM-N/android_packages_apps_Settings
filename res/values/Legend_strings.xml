@@ -62,9 +62,6 @@
     <string name="su_indicator_summary_on">Superuser indicator is visible when a session is active</string>
     <string name="su_indicator_summary_off">Toggle to show superuser indicator when a session is active</string>
 
-    <string name="double_tap_sleep_anywhere_title">Double Tap Sleep LockScreen</string>
-    <string name="double_tap_sleep_anywhere_summary">Double tap on the top third or the bottom shortcut area to sleep</string>
-
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Three finger gesture</string>
     <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
