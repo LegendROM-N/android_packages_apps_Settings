@@ -1,4 +1,4 @@
-/*package com.android.settings.Legend.tabs;
+package com.android.settings.Legend.tabs;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -47,4 +47,4 @@ public class LockScreen extends SettingsPreferenceFragment implements
         final String key = preference.getKey();
         return true;
     }
-}*/
+}
