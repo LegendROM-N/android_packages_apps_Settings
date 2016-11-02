@@ -32,7 +32,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.android.settings.Legend.tabs.GeneralUI;
-import com.android.settings.Legend.tabs.LockScreen;
+//import com.android.settings.Legend.tabs.LockScreen;
 import com.android.settings.Legend.tabs.StatusBar;
 import com.android.settings.Legend.tabs.System;
 import com.android.settings.Legend.PagerSlidingTabStrip;
@@ -156,7 +156,7 @@ public class LegendSettings extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new GeneralUI();
-            frags[1] = new LockScreen();
+            //frags[1] = new LockScreen();
             frags[2] = new StatusBar();
             /*frags[2] = new Navigation();
             frags[3] = new Recents();*/
@@ -184,7 +184,7 @@ public class LegendSettings extends SettingsPreferenceFragment {
         
         titleString = new String[]{
                     getString(R.string.generalui_category),
-                    getString(R.string.lockscreen_category),
+                    //getString(R.string.lockscreen_category),
                     getString(R.string.statusbar_category),
                     //getString(R.string.navigation_category),
                     //getString(R.string.multitasking_category),
