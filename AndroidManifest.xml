@@ -980,7 +980,7 @@
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
-                android:value="com.android.settings.category.LegendROM" />
+                android:value="com.android.settings.category.Legend" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.SuperUser" />
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
