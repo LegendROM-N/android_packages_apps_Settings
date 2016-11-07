@@ -1007,22 +1007,89 @@
         <item>Red</item>
     </string-array>
 
-    <!-- Possible values for user theme in Display Settings.
-         Do not translate. -->
-    <string-array name="night_mode_entries" translatable="false">
-        <!-- Do not translate. -->
-        <item>@string/night_mode_no</item>
-        <!-- Do not translate. -->
-        <item>@string/night_mode_yes</item>
+    <!-- Wifi extension requirement -->
+    <string-array name="cellcular2wifi_entries">
+        <item>Automatically connect</item>
+        <item>Manually connect</item>
+        <item>Always ask</item>
     </string-array>
 
-    <!-- These values should match up with the MODE_NIGHT constants in UiModeManager.
-         Do not translate. -->
-    <string-array name="night_mode_values" translatable="false">
-        <!-- Do not translate. -->
+    <!-- Wifi extension requirement -->
+    <string-array name="cellcular2wifi_values">
+        <item>0</item>
         <item>1</item>
-        <!-- Do not translate. -->
         <item>2</item>
+    </string-array>
+
+    <!-- CT MCC-MNC-->
+    <string-array name="ct_mcc_mnc_list"  translatable="false">
+        <item>45507</item>
+        <item>46003</item>
+        <item>46011</item>
+        <item>46012</item>
+        <item>20404</item>
+        <item>45502</item>
+        <item>45403</item>
+        <item>45404</item>
+    </string-array>
+
+    <!-- dm plmn that need to be hidden -->
+    <string-array name="hidedm_plmn_list">
+        <item>46000</item>
+        <item>46002</item>
+        <item>46003</item>
+        <item>46007</item>
+    </string-array>
+
+    <!-- supl plmn list that need to be hidden -->
+    <string-array name="hidesupl_plmn_list">
+        <item>46001</item>
+        <item>46003</item>
+        <item>46011</item>
+        <item>46012</item>
+        <item>45502</item>
+        <item>45507</item>
+    </string-array>
+
+    <!-- Defined the hide accounts' type -->
+    <string-array name="hide_account_list">
+        <item>com.qualcomm.qti.RIDL</item>
+        <item>com.android.localphone</item>
+        <item>com.android.sim</item>
+        <item>com.android.alice</item>
+        <item>com.android.yahoo</item>
+        <item>com.android.outlook</item>
+        <item>com.android.gmail</item>
+        <item>com.android.aol</item>
+        <item>com.android.free</item>
+        <item>com.android.laposte</item>
+        <item>com.android.sfr</item>
+        <item>com.android.orange</item>
+        <item>com.android.noos</item>
+    </string-array>
+
+    <string-array name="plmn_list_for_apn_disable">
+        <item>20404</item>
+        <item>45403</item>
+        <item>45404</item>
+        <item>45502</item>
+        <item>45507</item>
+        <item>46003</item>
+        <item>46011</item>
+    </string-array>
+
+    <!-- Automatic storage management settings. The amount of days for the automatic storage manager
+         to retain. These are shown in a list dialog. [CHAR LIMIT=70] -->
+    <string-array name="automatic_storage_management_days">
+        <item>Over 30 days old</item>
+        <item>Over 60 days old</item>
+        <item>Over 90 days old</item>
+    </string-array>
+
+    <string-array name="automatic_storage_management_days_values" translatable="false">
+        <item>30</item>
+        <item>60</item>
+        <item>90</item>
     </string-array>
 
 </resources>

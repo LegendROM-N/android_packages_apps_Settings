@@ -33,7 +33,7 @@
 
     <style name="SetupWizardTheme" parent="SuwThemeGlif">
         <!-- For all Alert Dialogs -->
-        <item name="android:alertDialogTheme">@style/Theme.AlertDialog</item>
+        <item name="android:alertDialogTheme">@style/ThemeOverlay.AlertDialog</item>
         <item name="android:colorPrimary">@color/suw_color_accent_dark</item>
         <item name="android:windowBackground">?android:attr/colorBackground</item>
         <item name="@*android:preferencePanelStyle">@*android:style/PreferencePanel.Dialog</item>
@@ -57,7 +57,7 @@
 
     <style name="SetupWizardTheme.Light" parent="SuwThemeGlif.Light">
         <!-- For all Alert Dialogs -->
-        <item name="android:alertDialogTheme">@style/Theme.AlertDialog</item>
+        <item name="android:alertDialogTheme">@style/ThemeOverlay.AlertDialog</item>
         <item name="android:colorPrimary">@color/suw_color_accent_light</item>
         <item name="android:windowBackground">?android:attr/colorBackground</item>
         <item name="@*android:preferencePanelStyle">@*android:style/PreferencePanel.Dialog</item>
@@ -203,8 +203,7 @@
         <item name="switchBarBackgroundColor">?android:attr/colorSecondary</item>
     </style>
 
-    <style name="Theme.DialogWhenLarge" parent="@android:style/Theme.Material.DayNight.DialogWhenLarge">
-
+    <style name="Theme.DialogWhenLarge" parent="@*android:style/Theme.DeviceDefault.Settings.DialogWhenLarge">
         <!-- Redefine the ActionBar style for contentInsetStart -->
         <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
 
@@ -231,7 +230,7 @@
         <item name="preferenceBackgroundColor">@drawable/preference_background</item>
     </style>
 
-    <style name="Theme.AlertDialog" parent="@*android:style/Theme.Material.DayNight.Dialog.Alert">
+    <style name="ThemeOverlay.AlertDialog" parent="@android:style/ThemeOverlay.Material.Dialog.Alert">
         <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
 
