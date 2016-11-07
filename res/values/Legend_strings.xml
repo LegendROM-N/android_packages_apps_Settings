@@ -72,4 +72,10 @@
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
 
     <string name="superuser_title">Superuser</string>
+
+    <!-- Optional screenshot type -->
+    <string name="screenshot_type_title">Screenshot type</string>
+    <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
+    <string name="screenshot_type_partial">Drag selection on the area you want to take as a screenshot</string>	
+
 </resources>
