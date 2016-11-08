@@ -18,22 +18,12 @@ import com.android.settings.SettingsPreferenceFragment;
 public class GeneralUI extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "GeneralUI";
-    private static final String SCREENSHOT_TYPE = "screenshot_type";
-
-    private ListPreference mScreenshotType;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.generalui); 
-
-	mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
-        int mScreenshotTypeValue = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.SCREENSHOT_TYPE, 0);
-        mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
-        mScreenshotType.setSummary(mScreenshotType.getEntry());
-        mScreenshotType.setOnPreferenceChangeListener(this);     
+        addPreferencesFromResource(R.xml.generalui);      
     }
 
     @Override
@@ -52,13 +42,7 @@ public class GeneralUI extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if  (preference == mScreenshotType) {
-	     int mScreenshotTypeValue = Integer.parseInt(((String) newValue).toString());
-            mScreenshotType.setSummary(
-                    mScreenshotType.getEntries()[mScreenshotTypeValue]);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
-            mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+        final String key = preference.getKey();
         return true;
     }
 } 
