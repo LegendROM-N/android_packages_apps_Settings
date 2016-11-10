@@ -7,6 +7,9 @@
     <string name="Legend_settings_title">Categories</string>
     <string name="supersu_title">SuperSU</string>
 
+    <!-- Superuser -->
+    <string name="superuser_title">Superuser</string>
+
     <!-- Tabs -->
     <string name="generalui_category">General UI</string>
     <string name="statusbar_category">Status Bar</string>

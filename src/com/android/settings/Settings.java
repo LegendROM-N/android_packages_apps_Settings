@@ -157,6 +157,7 @@ public class Settings extends SettingsActivity {
     public static class WifiInfoActivity extends SettingsActivity { /* empty */ }
     public static class LegendSettingsActivity extends SettingsActivity { /* empty */ }
     public static class SuperSUActivity extends SettingsActivity { /* empty */ }
+    public static class SuperUserActivity extends SettingsActivity { /* empty */ }
 
     // Categories.
     public static class WirelessSettings extends SettingsActivity { /* empty */ }
