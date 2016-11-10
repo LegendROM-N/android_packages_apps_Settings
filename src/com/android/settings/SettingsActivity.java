@@ -140,8 +140,6 @@ import java.util.Set;
 
 import com.android.settings.Legend.LegendSettings;
 
-private static final String SUPERSU_FRAGMENT = "com.android.settings.SuperSU";
-
 public class SettingsActivity extends SettingsDrawerActivity
         implements PreferenceManager.OnPreferenceTreeClickListener,
         PreferenceFragment.OnPreferenceStartFragmentCallback,
@@ -152,6 +150,8 @@ public class SettingsActivity extends SettingsDrawerActivity
     private static final String LOG_TAG = "Settings";
 
     private static final int LOADER_ID_INDEXABLE_CONTENT_MONITOR = 1;
+
+    private static final String SUPERSU_FRAGMENT = "com.android.settings.SuperSU";
 
     // Constants for state save/restore
     private static final String SAVE_KEY_CATEGORIES = ":settings:categories";
