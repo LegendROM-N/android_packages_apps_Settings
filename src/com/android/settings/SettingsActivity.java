@@ -152,6 +152,7 @@ public class SettingsActivity extends SettingsDrawerActivity
     private static final int LOADER_ID_INDEXABLE_CONTENT_MONITOR = 1;
 
     private static final String SUPERSU_FRAGMENT = "com.android.settings.SuperSU";
+    private static final String SUBSTRATUM_FRAGMENT = "com.android.settings.Substratum";
     private static final String SUPERUSER_FRAGMENT = "com.android.settings.SuperUser";
 
     // Constants for state save/restore
@@ -1047,7 +1048,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             finish();
             return null;
 	}
-
 	if (SUPERUSER_FRAGMENT.equals(fragmentName)) {
 	    Intent superuserIntent = new Intent();
 	    superuserIntent.setClassName("me.phh.superuser", "com.koushikdutta.superuser.MainActivity");
@@ -1056,7 +1056,13 @@ public class SettingsActivity extends SettingsDrawerActivity
 	    finish();
 	    return null;
 	}	
-
+	if (SUBSTRATUM_FRAGMENT.equals(fragmentName)) {
+            Intent subIntent = new Intent();
+            subIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
+            startActivity(subIntent);
+            finish();
+            return null;
+        }
         if (validate && !isValidFragment(fragmentName)) {
             throw new IllegalArgumentException("Invalid fragment for this activity: "
                     + fragmentName);
@@ -1150,6 +1156,16 @@ public class SettingsActivity extends SettingsDrawerActivity
         setTileEnabled(new ComponentName(packageName,
                         Settings.DevelopmentSettingsActivity.class.getName()),
                 showDev, isAdmin, pm);
+
+	// Substratum
+        boolean subSupported = false;
+        try {
+            subSupported = (getPackageManager().getPackageInfo("projekt.substratum", 0).versionCode > 0);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.SubstratumActivity.class.getName()),
+                subSupported, isAdmin, pm);
 
 	// SuperSU
         boolean suSupported = false;
