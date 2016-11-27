@@ -42,7 +42,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
     private static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
     private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
-    private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
+    //private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
 
     private ListPreference mNetTrafficState;
     private ListPreference mNetTrafficUnit;
@@ -140,11 +140,11 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         }
     }
 
-    @Override
+    /*@Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         /*menu.add(0, MENU_RESET, 0, R.string.network_traffic_color_reset)
                 .setIcon(R.drawable.ic_settings_backup)
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);*/
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 
     @Override
@@ -152,7 +152,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         switch (item.getItemId()) {
             /*case MENU_RESET:
                 resetToDefault();
-                return true;*/
+                return true;
             default:
                 return super.onContextItemSelected(item);
         }
@@ -177,8 +177,8 @@ public class NetworkTraffic extends SettingsPreferenceFragment
 
         /*mNetTrafficColor.setNewPreviewColor(DEFAULT_TRAFFIC_COLOR);
         String hexColor = String.format("#%08x", (0xffffffff & DEFAULT_TRAFFIC_COLOR));
-        mNetTrafficColor.setSummary(hexColor);*/
-    }
+        mNetTrafficColor.setSummary(hexColor);
+    } */
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mNetTrafficState) {
