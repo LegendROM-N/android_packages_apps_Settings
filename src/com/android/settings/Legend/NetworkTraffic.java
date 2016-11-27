@@ -85,7 +85,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         mNetTrafficAutohide.setOnPreferenceChangeListener(this);
 
 	mNetTrafficHidearrow =
-            (SwitchPreference) prefSet.findPreference(NETWORK_TRAFFIC_HIDEARROW);
+            (SwitchPreference) findPreference(NETWORK_TRAFFIC_HIDEARROW);
         mNetTrafficHidearrow.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_HIDEARROW, 0) == 1));
         mNetTrafficHidearrow.setOnPreferenceChangeListener(this);
