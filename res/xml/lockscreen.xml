@@ -6,7 +6,7 @@
     android:layout="@layout/preference_tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="double_tap_sleep_anywhere"
         android:title="@string/double_tap_sleep_anywhere_title"
         android:summary="@string/double_tap_sleep_anywhere_summary"
