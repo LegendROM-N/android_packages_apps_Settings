@@ -30,7 +30,7 @@ public class LockScreen extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.APPLICATION;
+        return MetricsEvent.LEGENDROM;
     }
 
     @Override
