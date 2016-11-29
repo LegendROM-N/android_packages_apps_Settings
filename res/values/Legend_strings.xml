@@ -7,6 +7,7 @@
     <string name="Legend_title">Legend Tweaks</string>
     <string name="Legend_settings_title">Categories</string>
     <string name="supersu_title">SuperSU</string>
+    <string name="su_dashboard_summary">Manage root access</string>
 
     <!-- Superuser -->
     <string name="superuser_title">Superuser</string>
