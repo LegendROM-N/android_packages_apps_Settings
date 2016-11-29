@@ -61,7 +61,23 @@ public class StatusBar extends SettingsPreferenceFragment implements
         return MetricsEvent.LEGENDROM;
     }
 
-    @Override
+    private void updateSmartPulldownSummary(int value) {
+         Resources res = getResources();
+ 
+         if (value == 0) {
+             // Smart pulldown deactivated
+             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_off));
+         } else if (value == 3) {
+             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_none_summary));
+         } else {
+             String type = res.getString(value == 1
+                     ? R.string.smart_pulldown_dismissable
+                     : R.string.smart_pulldown_ongoing);
+             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
+         }
+     }
+
+   /*@Override
     public void onResume() {
         super.onResume();
     }
@@ -74,5 +90,5 @@ public class StatusBar extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
         return true;
-    }
+    }*/
 }
