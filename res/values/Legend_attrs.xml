@@ -56,6 +56,11 @@
 		<attr name="netMin" format="integer" />
     	<attr name="netUnitsLeft" format="string" />
     	<attr name="netUnitsRight" format="string" />
+	<attr name="minimum" format="integer" />
+	<attr name="maximum" format="integer" />
+	<attr name="interval" format="integer" />
+	<attr name="units" format="string|reference" />
+	
      </declare-styleable>
 
      <!-- Base attributes available to CustomSeekBarPreference. -->

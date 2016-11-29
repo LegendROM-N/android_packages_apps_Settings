@@ -8,11 +8,11 @@ import android.os.SystemProperties;
 import android.content.ContentResolver;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
-import android.preference.PreferenceCategory;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
@@ -25,19 +25,21 @@ public class GeneralUI extends SettingsPreferenceFragment implements
     private static final String TAG = "GeneralUI";
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
 
+    private SeekBarPreference mScreenshotDelay;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-	
+
 	      ContentResolver resolver = getActivity().getContentResolver();
 
-        addPreferencesFromResource(R.xml.generalui); 
+        addPreferencesFromResource(R.xml.generalui);
 
 	mScreenshotDelay = (SeekBarPreference) findPreference(SCREENSHOT_DELAY);
         int screenshotDelay = Settings.System.getInt(resolver,
                 Settings.System.SCREENSHOT_DELAY, 1000);
         mScreenshotDelay.setValue(screenshotDelay / 1);
-        mScreenshotDelay.setOnPreferenceChangeListener(this);     
+        mScreenshotDelay.setOnPreferenceChangeListener(this);
     }
 
     @Override
