@@ -2507,6 +2507,8 @@
                 android:value="com.android.settings.category.Legend" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.Legend.LegendSettings" />
+	    <meta-data android:name="com.android.settings.summary"
+		android:resource="@string/Legend_settings_summary" />
         </activity>
 
 	<activity android:name="Settings$SubstratumActivity"
