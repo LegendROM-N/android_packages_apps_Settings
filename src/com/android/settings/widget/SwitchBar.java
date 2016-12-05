@@ -68,8 +68,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
     private EnforcedAdmin mEnforcedAdmin = null;
 
     private String mMetricsTag;
-    private int mStateOnLabel = R.string.switch_on_text;
-    private int mStateOffLabel = R.string.switch_off_text;
 
     private ArrayList<OnSwitchChangeListener> mSwitchChangeListeners =
             new ArrayList<OnSwitchChangeListener>();
@@ -138,17 +136,9 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         mMetricsTag = tag;
     }
 
-    public void setOnStateOnLabel(int stringRes) {
-        mStateOnLabel = stringRes;
-    }
-
-    public void setOnStateOffLabel(int stringRes) {
-        mStateOffLabel = stringRes;
-    }
-
     public void setTextViewLabel(boolean isChecked) {
         mLabel = getResources()
-                .getString(isChecked ? mStateOnLabel : mStateOffLabel);
+                .getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text);
         updateText();
     }
 
@@ -281,8 +271,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
     static class SavedState extends BaseSavedState {
         boolean checked;
         boolean visible;
-        int resOnLabel;
-        int resOffLabel;
 
         SavedState(Parcelable superState) {
             super(superState);
@@ -295,8 +283,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
             super(in);
             checked = (Boolean)in.readValue(null);
             visible = (Boolean)in.readValue(null);
-            resOnLabel = in.readInt();
-            resOffLabel = in.readInt();
         }
 
         @Override
@@ -304,8 +290,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
             super.writeToParcel(out, flags);
             out.writeValue(checked);
             out.writeValue(visible);
-            out.writeInt(resOnLabel);
-            out.writeInt(resOffLabel);
         }
 
         @Override
@@ -313,10 +297,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
             return "SwitchBar.SavedState{"
                     + Integer.toHexString(System.identityHashCode(this))
                     + " checked=" + checked
-                    + " visible=" + visible
-                    + " resOnLabel = " + resOnLabel
-                    + " resOffLabel = " + resOffLabel
-                    + "}";
+                    + " visible=" + visible + "}";
         }
 
         public static final Parcelable.Creator<SavedState> CREATOR
@@ -338,8 +319,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         SavedState ss = new SavedState(superState);
         ss.checked = mSwitch.isChecked();
         ss.visible = isShowing();
-        ss.resOnLabel = mStateOnLabel;
-        ss.resOffLabel = mStateOffLabel;
         return ss;
     }
 
@@ -350,8 +329,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         super.onRestoreInstanceState(ss.getSuperState());
 
         mSwitch.setCheckedInternal(ss.checked);
-        setOnStateOnLabel(ss.resOnLabel);
-        setOnStateOffLabel(ss.resOffLabel);
         setTextViewLabel(ss.checked);
         setVisibility(ss.visible ? View.VISIBLE : View.GONE);
         mSwitch.setOnCheckedChangeListener(ss.visible ? this : null);
