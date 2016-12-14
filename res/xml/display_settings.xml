@@ -117,9 +117,9 @@
                 android:defaultValue="false"
                 cm:requiresFeature="cmhardware:FEATURE_HIGH_TOUCH_SENSITIVITY" />
 
-        <!-- Expanded desktop -->
+     <!--   <!-- Expanded desktop 
         <org.cyanogenmod.internal.cmparts.CMPartsPreference
-                android:key="expanded_desktop_settings" />
+                android:key="expanded_desktop_settings" /> -->
 
         <PreferenceScreen
                 android:key="font_size"
