@@ -44,4 +44,7 @@
     <!-- Colors of the help screen -->
     <color name="color_picker_help_screen_background">#e0000000</color>
     <color name="color_picker_help_summary_text_color">#b3ffffff</color>
+
+    <!-- External Icon Tint -->
+    <color name="external_tile_icon_tint_color">?android:attr/colorAccent</color>
 </resources>
