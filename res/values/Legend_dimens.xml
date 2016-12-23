@@ -130,8 +130,12 @@
 
     <!-- Text size of the color picker help screen summary text -->
     <dimen name="color_picker_help_screen_summary_text_size">12sp</dimen>
-    <!-- Color picker end -->
 
-      <dimen name="fab_margin">16dp</dimen>
+    <!-- Color picker end -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Color engine -->
+    <dimen name="theme_preview_actionbar_size">15dp</dimen>
+    <dimen name="theme_color_margin_side">20dp</dimen>
 
 </resources> 
