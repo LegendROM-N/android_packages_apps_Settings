@@ -36,6 +36,12 @@
             android:summary="@string/toast_icon_summary"
             android:defaultValue="false" />
 
+    <PreferenceScreen
+            android:key="rr_blur"
+            android:fragment="com.android.settings.Legend.BlurPersonalizations"
+            android:title="@string/settings_blur_cat" 
+            android:icon="@drawable/rr_blur_icon"/>
+
     <PreferenceCategory
             android:key="dashboard_category"
             android:title="@string/dashboard_category">
