@@ -54,6 +54,7 @@ import java.util.List;
 import java.util.Map;
 
 import cyanogenmod.providers.CMSettings;
+import com.android.settings.chameleonos.SeekBarPreference;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class BlurPersonalizations extends SettingsPreferenceFragment

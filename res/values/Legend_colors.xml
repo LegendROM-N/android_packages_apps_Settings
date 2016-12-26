@@ -9,4 +9,5 @@
     <color name="action_picker_fab_background">@color/theme_accent</color>
     <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
     <drawable name="expanded_item_bg">@android:color/background_light</drawable>
+    <color name="seekbar_dot_color">@android:color/holo_red_light</color>
  </resources> 
