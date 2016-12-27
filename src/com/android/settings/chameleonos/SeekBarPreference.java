@@ -1,17 +1,27 @@
+/*
+ * Copyright (C) 2016 The Dirty Unicorns Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License
+ */
+
 package com.android.settings.chameleonos;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.support.v7.preference.Preference;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.ViewParent;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.support.v7.preference.*;
@@ -32,24 +42,20 @@ public class SeekBarPreference extends Preference implements SeekBar.OnSeekBarCh
     private String mUnits = "";
     private SeekBar mSeekBar;
     private TextView mTitle;
-    private ImageView mImagePlus;
-    private ImageView mImageMinus;
-    private Drawable mProgressThumb;
-
     private TextView mStatusText;
 
     public SeekBarPreference(Context context, AttributeSet attrs, int defStyleAttr,
             int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         final TypedArray a = context.obtainStyledAttributes(
-                attrs, R.styleable.CustomSeekBarPreference);
+                attrs, R.styleable.SeekBarPreference);
 
         mMax = attrs.getAttributeIntValue(SETTINGS_NS, "maximum", 100);
         mMin = attrs.getAttributeIntValue(SETTINGS_NS, "minimum", 0);
         mDefaultValue = attrs.getAttributeIntValue(ANDROIDNS, "defaultValue", -1);
         mUnits = getAttributeStringValue(attrs, SETTINGS_NS, "units", "");
 
-        Integer id = a.getResourceId(R.styleable.CustomSeekBarPreference_units, 0);
+        Integer id = a.getResourceId(R.styleable.SeekBarPreference_units, 0);
         if (id > 0) {
             mUnits = context.getResources().getString(id);
         }
@@ -100,57 +106,11 @@ public class SeekBarPreference extends Preference implements SeekBar.OnSeekBarCh
             mSeekBar.setEnabled(!disableDependent);
         if (mStatusText != null)
             mStatusText.setEnabled(!disableDependent);
-	if (mImagePlus != null)
-            mImagePlus.setEnabled(!disableDependent);
-        if (mImageMinus != null)
-            mImageMinus.setEnabled(!disableDependent);
     }
 
-    protected View onCreateView(ViewGroup parent){
-
-        RelativeLayout layout =  null;
-        try {
-            LayoutInflater mInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            layout = (RelativeLayout)mInflater.inflate(R.layout.seek_bar_preference, parent, false);
-            mTitle = (TextView) layout.findViewById(android.R.id.title);
-            mImagePlus = (ImageView) layout.findViewById(R.id.imagePlus);
-            mImagePlus.setOnClickListener(new View.OnClickListener() {
-                 @Override
-                 public void onClick(View view) {
-                     mSeekBar.setProgress((mCurrentValue + 1) - mMinValue);
-                 }
-             });
-             mImagePlus.setOnLongClickListener(new View.OnLongClickListener() {
-                 @Override
-                 public boolean onLongClick(View view) {
-                     mSeekBar.setProgress((mCurrentValue + 10) - mMinValue);
-                    return true;
-                }
-            });
-            mImageMinus = (ImageView) layout.findViewById(R.id.imageMinus);
-            mImageMinus.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mSeekBar.setProgress((mCurrentValue - 1) - mMinValue);
-                }
-            });
-            mImageMinus.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    mSeekBar.setProgress((mCurrentValue - 10) - mMinValue);
-                    return true;
-                }
-            });
-	    mProgressThumb = mSeekBar.getThumb();
-	}
-        catch(Exception e)
-        {
-            Log.e(TAG, "Error creating seek bar preference", e);
-        }
-        return layout;
-    }
-
+    @Override
     public void onBindViewHolder(PreferenceViewHolder view) {
+        super.onBindViewHolder(view);
         try
         {
             // move our seekbar to the new view we've been given
@@ -210,13 +170,8 @@ public class SeekBarPreference extends Preference implements SeekBar.OnSeekBarCh
         }
         // change accepted, store it
         mCurrentValue = newValue;
-	if (mCurrentValue == mDefaultValue && mDefaultValue != -1) {
-            mStatusText.setText(R.string.default_string);
-            int redColor = getContext().getResources().getColor(R.color.seekbar_dot_color);
-            mProgressThumb.setColorFilter(redColor, PorterDuff.Mode.SRC_IN);
-        } else {
-            mStatusText.setText(String.valueOf(newValue));
-            mProgressThumb.clearColorFilter();
+        if (mStatusText != null) {
+            mStatusText.setText(String.valueOf(newValue) + mUnits);
         }
         persistInt(newValue);
     }
