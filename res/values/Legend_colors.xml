@@ -18,7 +18,7 @@
 
     <!-- Color picker -->
     <color name="color_picker_color_view_drawable_border">#33ffffff</color>
-    <color name="theme_accent">#ff009688</color>
+    <color name="theme_accent">#ff4285f4</color>
     <color name="background_blue_grey">#ff1b1f23</color>
     <color name="colorpick_primary">@color/theme_accent</color>
 
