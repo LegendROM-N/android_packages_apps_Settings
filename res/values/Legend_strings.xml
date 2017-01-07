@@ -7,6 +7,7 @@
     <string name="substratum_summary">Theme your device</string>
     <string name="Legend_title">Legend Tweaks</string>
     <string name="Legend_settings_summary">Where Things Get Legendary</string>
+    <string name="changelog_summary">Recent Changes</string>
     <string name="Legend_settings_title">Categories</string>
     <string name="supersu_title">SuperSU</string>
     <string name="su_dashboard_summary">Manage root access</string>
@@ -22,6 +23,24 @@
     <string name="multitasking_category">Recents</string>
     <string name="system_category">System</string>
     <string name="lockscreen_category">LockScreen Settings</string>
+
+    <!-- About LegendROM -->
+    <string name="lr_about_info">About us</string>
+    <string name="lr_about_summary">Our Introduction and our Team</string>
+    <string name="lr_about_info_summary">LegendROM is Lineage based ROM which provides smooth and stock UI/UX with various and only much needed customizations features along with the full Substratum support. The main aim of this ROM is to provide a smooth and lag-free experience out of the box. We will constantly try to add important features and make it even better with every updates.&#35;GetLegendary</string>
+    <string name="dev_info">About LegendROM</string>
+    <string name="leads">Team Leads</string>
+    <string name="github">Github</string>
+    <string name="github_description">View our source code</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Join out Telegram discussion group</string>
+    <string name="maintainers">Maintainers</string>
+    <string name="dev_1">Yashraj Jhala &#40;jhalayashraj&#41;</string>
+    <string name="dev1_description">Lead Developer, Bacon,Oneplus 3-3T,Cheeseburger Maintainer</string>
+    <string name="dev_2">Pranav Thombare &#40;pranavthombare&#41;</string>
+    <string name="dev2_description">Lead Developer, Oneplus 2,Onyx Maintainer</string>
+    <string name="dev_3">Arjun &#40;arjun921&#41;</string>
+    <string name="dev3_description">Mido Maintainer</string>
 
     <!-- General -->
     <string name="ok">Okay</string>

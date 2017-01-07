@@ -19,9 +19,17 @@
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:title="@string/about_settings">
 
+        <!-- About us -->
+        <PreferenceScreen
+        android:key="lr_about_info"
+        android:title="@string/lr_about_info"
+	android:summary="@string/lr_about_summary"
+        android:fragment="com.android.settings.Legend.AboutUs" />
+
         <!-- Changelog -->
         <PreferenceScreen android:key="changelog"
                 android:title="@string/changelog_LegendROM_title"
+		android:summary="@string/changelog_summary"
                 android:fragment="com.android.settings.LegendROM.Changelog" />
 
         <!-- System update settings - launches activity -->
