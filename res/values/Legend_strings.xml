@@ -245,12 +245,12 @@
     <string name="color_picker_help_button_ok_title">OK</string>
 
     <string name="show_4g_title">Show 4G</string>
-    <string name="show_4g_summary">Show 4g instead of LTE in signal icons</string>
+    <string name="show_4g_summary">Show 4G instead of LTE in signal icons</string>
 
     <!-- Clear-All recents FAB -->
     <string name="show_clear_all_recents_button_title">Clear-all FAB</string>
     <string name="show_clear_all_recents_button_summary_on">Show clear all FAB</string>
-    <string name="show_clear_all_recents_button_summary_off">Show AOSP clear all</string>
+    <string name="show_clear_all_recents_button_summary_off">Show Stock clear all</string>
     <string name="recents_clear_all_location_title">Clear all FAB location</string>
     <string name="recents_clear_all_location_top_right">Top right</string>
     <string name="recents_clear_all_location_top_left">Top left</string>
