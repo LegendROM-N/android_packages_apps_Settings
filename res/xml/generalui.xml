@@ -37,15 +37,17 @@
             android:defaultValue="false" />
 
     <PreferenceScreen
+        android:key="rr_tm"
+        android:fragment="com.android.settings.Legend.TaskManagerSettings"
+        android:title="@string/enable_task_manager_title"
+        android:summary="@string/enable_task_manager_summary"
+        android:icon="@drawable/rr_tm_icon"/>
+
+    <PreferenceScreen
             android:key="rr_blur"
             android:fragment="com.android.settings.Legend.BlurPersonalizations"
             android:title="@string/settings_blur_cat" 
             android:icon="@drawable/rr_blur_icon"/>
-
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="enable_task_manager"
-        android:title="@string/enable_task_manager_title"
-        android:summary="@string/enable_task_manager_summary" />
 
     <PreferenceCategory
             android:key="stock_recents"
