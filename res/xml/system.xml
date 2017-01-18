@@ -23,7 +23,7 @@
     <!-- Wakelock blocker -->
     <PreferenceScreen
             android:key="wakelock_blocker"
-            android:fragment="com.android.settings.Legend.WakeLockBlockerFragment"
+            android:fragment="com.android.settings.Legend.WakelockBlockerFragment"
             android:title="@string/wakelock_blocker_title"
             android:icon="@drawable/lr_wakelockblocker_icon"
             />

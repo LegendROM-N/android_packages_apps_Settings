@@ -87,7 +87,7 @@
             android:title="@string/dashboard_category">
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-                android:key="disable_dashboard_suggestions"
+                android:key="disable_suggestions"
                 android:title="@string/dashboard_suggestions_title"
                 android:summaryOn="@string/summary_dashboard_suggestions_enabled"
                 android:summaryOff="@string/summary_dashboard_suggestions_disabled"
