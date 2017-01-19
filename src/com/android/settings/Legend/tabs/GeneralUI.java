@@ -8,6 +8,8 @@ import android.os.SystemProperties;
 import android.content.ContentResolver;
 import android.os.UserHandle;
 import android.provider.Settings;
+import com.android.settings.accessibility.ToggleFontSizePreferenceFragment;
+import com.android.settings.dashboard.DashboardSummary;
 import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
@@ -26,10 +28,12 @@ public class GeneralUI extends SettingsPreferenceFragment implements
     private static final String SCREENRECORD_CHORD_TYPE = "screenrecord_chord_type";
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    private static final String KEY_DASHBOARD_COLUMNS = "dashboard_columns";
 
     private SeekBarPreference mScreenshotDelay;
     private ListPreference mScreenrecordChordType;
     private ListPreference mRecentsClearAllLocation;
+    private ListPreference mDashboardColumns;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,13 @@ public class GeneralUI extends SettingsPreferenceFragment implements
         mRecentsClearAllLocation.setValue(String.valueOf(location));
         mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
         mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+
+	mDashboardColumns = (ListPreference) findPreference(KEY_DASHBOARD_COLUMNS);
+        mDashboardColumns.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.DASHBOARD_COLUMNS, DashboardSummary.mNumColumns)));
+        mDashboardColumns.setSummary(mDashboardColumns.getEntry());
+        mDashboardColumns.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -91,6 +102,12 @@ public class GeneralUI extends SettingsPreferenceFragment implements
         } else if  (preference == mScreenrecordChordType) {
             handleActionListChange(mScreenrecordChordType, newValue,
                     Settings.System.SCREENRECORD_CHORD_TYPE);
+            return true;
+        } else if (preference == mDashboardColumns) {
+            Settings.System.putInt(getContentResolver(), Settings.System.DASHBOARD_COLUMNS,
+                    Integer.valueOf((String) objValue));
+            mDashboardColumns.setValue(String.valueOf(objValue));
+            mDashboardColumns.setSummary(mDashboardColumns.getEntry());
             return true;
         }
 	return false;
