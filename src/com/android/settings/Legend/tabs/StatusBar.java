@@ -26,10 +26,12 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
+    private static final String PREF_QS_EASY_TOGGLE = "qs_easy_toggle";
 
     private ListPreference mSmartPulldown;
     private SwitchPreference mForceExpanded;
     private SwitchPreference mDisableIM;
+    private SwitchPreference mEasyToggle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,10 @@ public class StatusBar extends SettingsPreferenceFragment implements
                 DISABLE_IMMERSIVE_MESSAGE, 0);
         mDisableIM.setChecked(DisableIM != 0);
 
+	mEasyToggle = (SwitchPreference) findPreference(PREF_QS_EASY_TOGGLE);
+        mEasyToggle.setOnPreferenceChangeListener(this);
+        mEasyToggle.setChecked((Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_EASY_TOGGLE, 0) == 1));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -77,6 +83,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), DISABLE_IMMERSIVE_MESSAGE,
                     value ? 1 : 0);
+            return true;
+	} else if  (preference == mEasyToggle) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QS_EASY_TOGGLE, checked ? 1:0);
             return true;
 	}
 	return false;

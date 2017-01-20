@@ -277,11 +277,7 @@
     <string name="task_manager_kill_button_3">Classic</string>
 
     <!-- Advanced tile -->
-    <string name="qs_advanced_data_title">Advanced Data tile</string>
-    <string name="qs_advanced_data_summary">Enable one tap action to enable or disable data</string>
-    <string name="qs_advanced_wifi_title">Advanced WiFi tile</string>
-    <string name="qs_advanced_wifi_summary">Enable one tap action to enable or disable WiFi</string>
-    <string name="qs_advanced_bt_title">Advanced Bluetooth tile</string>
-    <string name="qs_advanced_bt_summary">Enable one tap action to enable or disable bluetooth</string>
+    <string name="qs_easy_toggle_title">Advanced QS Easy Toggle</string>
+    <string name="qs_easy_toggle_summary">Enable one tap action to enable or disable mobile data, wifi, and bluetooth</string>
 
 </resources>
