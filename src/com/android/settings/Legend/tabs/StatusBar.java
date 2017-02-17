@@ -49,7 +49,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String PREF_COLUMNS = "qs_layout_columns";
     private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
     private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
-    private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
 
     private ListPreference mSmartPulldown;
     private SwitchPreference mForceExpanded;
@@ -63,7 +62,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SeekBarPreference mQsColumns;
     private SeekBarPreference mRowsPortrait;
     private SeekBarPreference mRowsLandscape;
-    private SeekBarPreference mSysuiQqsCount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -168,31 +166,27 @@ public class StatusBar extends SettingsPreferenceFragment implements
         mRowsLandscape.setValue(rowsLandscape / 1);
         mRowsLandscape.setOnPreferenceChangeListener(this);
 
-	mSysuiQqsCount = (SeekBarPreference) findPreference(PREF_SYSUI_QQS_COUNT);
-        int SysuiQqsCount = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.QQS_COUNT, 6);
-        mSysuiQqsCount.setValue(SysuiQqsCount / 1);
-        mSysuiQqsCount.setOnPreferenceChangeListener(this);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-  	ContentResolver resolver = getActivity().getContentResolver();
-
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
 	int intValue;
 	int index;
 
+  	ContentResolver resolver = getActivity().getContentResolver();
+	final Resources res = getResources();
+
 	if (preference == mSmartPulldown) {
-            int smartPulldown = Integer.valueOf((String) newValue);
+            int smartPulldown = Integer.valueOf((String) objValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
             return true;
 	} else if (preference == mForceExpanded) {
-            boolean value = (Boolean) newValue;
+            boolean value = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(), FORCE_EXPANDED_NOTIFICATIONS,
                     value ? 1 : 0);
             return true;
 	} else if (preference == mDisableIM) {
-            boolean value = (Boolean) newValue;
+            boolean value = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(), DISABLE_IMMERSIVE_MESSAGE,
                     value ? 1 : 0);
             return true;
@@ -216,25 +210,20 @@ public class StatusBar extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
             return true;
-	} else if (preference == mSysuiQqsCount) {
-            int SysuiQqsCount = (Integer) objValue;
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
-            return true;
 	} else if (preference == mDaylightHeaderPack) {
-            String value = (String) newValue;
+            String value = (String) objValue;
             Settings.System.putString(getContentResolver(),
                     Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
             int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
             mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
             return true;
          } else if (preference == mHeaderShadow) {
-            Integer headerShadow = (Integer) newValue;
+            Integer headerShadow = (Integer) objValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, headerShadow);
             return true;
          } else if (preference == mHeaderProvider) {
-            String value = (String) newValue;
+            String value = (String) objValue;
             Settings.System.putString(getContentResolver(),
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER, value);
             int valueIndex = mHeaderProvider.findIndexOfValue(value);
