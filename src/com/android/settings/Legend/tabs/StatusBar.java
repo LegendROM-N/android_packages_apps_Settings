@@ -46,6 +46,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
+    private static final String PREF_COLUMNS = "qs_layout_columns";
 
     private ListPreference mSmartPulldown;
     private SwitchPreference mForceExpanded;
@@ -56,6 +57,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SeekBarPreference mHeaderShadow;
     private PreferenceScreen mHeaderBrowse;
     private String mDaylightHeaderProvider;
+    private SeekBarPreference mQsColumns;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
 	PreferenceScreen prefSet = getPreferenceScreen();
   		ContentResolver resolver = getActivity().getContentResolver();
+
+	int defaultValue;
 
 	mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
 	mSmartPulldown.setOnPreferenceChangeListener(this);
@@ -138,10 +142,20 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
         mHeaderBrowse = (PreferenceScreen) findPreference(CUSTOM_HEADER_BROWSE);
         mHeaderBrowse.setEnabled(isBrowseHeaderAvailable());
+
+	mQsColumns = (SeekBarPreference) findPreference(PREF_COLUMNS);
+	int columnsQs = Settings.System.getInt(resolver,
+		Settings.System.QS_LAYOUT_COLUMNS, 3);
+	mQsColumns.setValue(columnsQs / 1);
+	mQsColumns.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
   	ContentResolver resolver = getActivity().getContentResolver();
+
+	int intValue;
+	int index;
+
 	if (preference == mSmartPulldown) {
             int smartPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
@@ -161,6 +175,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.QS_EASY_TOGGLE, checked ? 1:0);
+            return true;
+	} else if (preference == mQsColumns) {
+            int qsColumns = (Integer) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
             return true;
 	} else if (preference == mDaylightHeaderPack) {
             String value = (String) newValue;

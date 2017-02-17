@@ -105,4 +105,18 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="qs_layout_category"
+        android:title="@string/qs_layout_category">
+
+    <com.android.settings.chameleonos.SeekBarPreference
+        android:key="qs_layout_columns"
+        android:title="@string/qs_columns_title"
+        settings:max="7"
+        settings:min="1"
+        settings:units=""
+        android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
