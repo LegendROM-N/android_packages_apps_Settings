@@ -47,6 +47,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
     private static final String PREF_COLUMNS = "qs_layout_columns";
+    private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
+    private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
 
     private ListPreference mSmartPulldown;
     private SwitchPreference mForceExpanded;
@@ -58,6 +60,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private PreferenceScreen mHeaderBrowse;
     private String mDaylightHeaderProvider;
     private SeekBarPreference mQsColumns;
+    private SeekBarPreference mRowsPortrait;
+    private SeekBarPreference mRowsLandscape;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -148,6 +152,19 @@ public class StatusBar extends SettingsPreferenceFragment implements
 		Settings.System.QS_LAYOUT_COLUMNS, 3);
 	mQsColumns.setValue(columnsQs / 1);
 	mQsColumns.setOnPreferenceChangeListener(this);
+
+	mRowsPortrait = (SeekBarPreference) findPreference(PREF_ROWS_PORTRAIT);
+        int rowsPortrait = Settings.System.getInt(resolver,
+                Settings.System.QS_ROWS_PORTRAIT, 3);
+        mRowsPortrait.setValue(rowsPortrait / 1);
+        mRowsPortrait.setOnPreferenceChangeListener(this);
+
+        defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
+        mRowsLandscape = (SeekBarPreference) findPreference(PREF_ROWS_LANDSCAPE);
+        int rowsLandscape = Settings.System.getInt(resolver,
+                Settings.System.QS_ROWS_LANDSCAPE, defaultValue);
+        mRowsLandscape.setValue(rowsLandscape / 1);
+        mRowsLandscape.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -180,6 +197,16 @@ public class StatusBar extends SettingsPreferenceFragment implements
             int qsColumns = (Integer) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
+            return true;
+	} else if (preference == mRowsPortrait) {
+            int rowsPortrait = (Integer) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_ROWS_PORTRAIT, rowsPortrait * 1);
+            return true;
+        } else if (preference == mRowsLandscape) {
+            int rowsLandscape = (Integer) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
             return true;
 	} else if (preference == mDaylightHeaderPack) {
             String value = (String) newValue;
