@@ -343,16 +343,12 @@
   <string name="security_settings_fingerprint_sensor_location_front">ön</string>
   <string name="security_settings_fingerprint_sensor_location_left">sol taraf</string>
   <string name="security_settings_fingerprint_sensor_location_right">sağ taraf</string>
-  <!-- Tethering & portable hotspot other category -->
-  <string name="tethering_other_category_text">Diğer</string>
-  <!-- Wi-Fi tethering inactivity timeout -->
-  <string name="hotstpot_inactivity_timeout_text">Kablosuz hotspot zaman aşımı</string>
-  <string name="hotstpot_inactivity_timeout_never">Asla</string>
-  <string name="hotstpot_inactivity_timeout_1_minute">1 dakika</string>
-  <string name="hotstpot_inactivity_timeout_5_minutes">5 dakika</string>
-  <string name="hotstpot_inactivity_timeout_10_minutes">10 dakika</string>
-  <string name="hotstpot_inactivity_timeout_never_summary_text">Taşınabilir Wi\u2011Fi bağlantı noktası zaman aşımı yok</string>
-  <string name="hotstpot_inactivity_timeout_summary_text">Taşınabilir kablosuz hotspot bağlantı noktası zaman aşımı <xliff:g id="timeout">%1$s </xliff:g> sn sonra</string>
+  <!-- Wi-Fi region code -->
+  <string name="wifi_setting_countrycode_title">Wi\u2011Fi bölge kodu</string>
+  <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
+  <string name="wifi_setting_countrycode_summary">Wi\u2011Fi için bölge kodunu girin</string>
+  <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
+  <string name="wifi_setting_countrycode_error">Bölge kodunu ayarlarken sorun oluştu.</string>
   <!-- Wake on plug -->
   <string name="wake_when_plugged_or_unplugged_title">Takıp çıkarmada uyan</string>
   <string name="wake_when_plugged_or_unplugged_summary">Bir güç kaynağına bağlanırken ya da bağlantısını keserken ekranı aç</string>
@@ -365,6 +361,16 @@
   <string name="crypt_keeper_choose_your_password_header">Şifreleme parolasını ayarlayın</string>
   <string name="crypt_keeper_replace_password_title">Şifreleme parolası değiştir</string>
   <string name="crypt_keeper_replace_password_summary">Ayrı şifreleme parolasını kaldırın</string>
+  <!-- Tethering & portable hotspot other category -->
+  <string name="tethering_other_category_text">Diğer</string>
+  <!-- Wi-Fi tethering inactivity timeout -->
+  <string name="hotstpot_inactivity_timeout_text">Kablosuz hotspot zaman aşımı</string>
+  <string name="hotstpot_inactivity_timeout_never">Asla</string>
+  <string name="hotstpot_inactivity_timeout_1_minute">1 dakika</string>
+  <string name="hotstpot_inactivity_timeout_5_minutes">5 dakika</string>
+  <string name="hotstpot_inactivity_timeout_10_minutes">10 dakika</string>
+  <string name="hotstpot_inactivity_timeout_never_summary_text">Taşınabilir Wi\u2011Fi bağlantı noktası zaman aşımı yok</string>
+  <string name="hotstpot_inactivity_timeout_summary_text">Taşınabilir kablosuz hotspot bağlantı noktası zaman aşımı <xliff:g id="timeout">%1$s </xliff:g> sn sonra</string>
   <!-- Per-app data restrictions -->
   <string name="data_usage_app_restrict_data_category_title">Hücresel veri kullanımı</string>
   <string name="data_usage_app_restrict_wifi_category_title">Wi\u2011Fi veri kullanımı</string>

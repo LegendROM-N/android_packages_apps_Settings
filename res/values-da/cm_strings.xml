@@ -328,6 +328,19 @@
   <string name="security_settings_fingerprint_sensor_location_front">front</string>
   <string name="security_settings_fingerprint_sensor_location_left">venstre side</string>
   <string name="security_settings_fingerprint_sensor_location_right">højre side</string>
+  <!-- Wi-Fi region code -->
+  <string name="wifi_setting_countrycode_title">Wi\u2011Fi-regionskode</string>
+  <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
+  <string name="wifi_setting_countrycode_summary">Angiv regionskoden for Wi\u2011Fi</string>
+  <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
+  <string name="wifi_setting_countrycode_error">Der opstod et problem med indstillingen af regionskoden.</string>
+  <!-- Wake on plug -->
+  <string name="wake_when_plugged_or_unplugged_title">Væk ved strøm</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Tænd skærmen, når du tilslutter eller frakobler en strømkilde</string>
+  <!-- Heads-up -->
+  <string name="heads_up_notifications_enabled_title">Vigtige underretninger</string>
+  <string name="heads_up_notifications_enabled_summary">Vise prioriteretsunderretninger i et lille flydende vindue</string>
+  <!-- Encryption password -->
   <!-- Tethering & portable hotspot other category -->
   <string name="tethering_other_category_text">Andet</string>
   <!-- Wi-Fi tethering inactivity timeout -->
@@ -338,13 +351,6 @@
   <string name="hotstpot_inactivity_timeout_10_minutes">10 minutter</string>
   <string name="hotstpot_inactivity_timeout_never_summary_text">Ingen tidsgrænse for Mobil Wi\u2011Fi hotspot</string>
   <string name="hotstpot_inactivity_timeout_summary_text">Tidsgrænse for Mobil Wi\u2011Fi hotspot udløber efter <xliff:g id="timeout">%1$s</xliff:g></string>
-  <!-- Wake on plug -->
-  <string name="wake_when_plugged_or_unplugged_title">Væk ved strøm</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Tænd skærmen, når du tilslutter eller frakobler en strømkilde</string>
-  <!-- Heads-up -->
-  <string name="heads_up_notifications_enabled_title">Vigtige underretninger</string>
-  <string name="heads_up_notifications_enabled_summary">Vise prioriteretsunderretninger i et lille flydende vindue</string>
-  <!-- Encryption password -->
   <!-- Per-app data restrictions -->
   <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
   <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->

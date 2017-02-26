@@ -338,16 +338,12 @@
   <string name="security_settings_fingerprint_sensor_location_front">elején</string>
   <string name="security_settings_fingerprint_sensor_location_left">bal oldalán</string>
   <string name="security_settings_fingerprint_sensor_location_right">jobb oldalán</string>
-  <!-- Tethering & portable hotspot other category -->
-  <string name="tethering_other_category_text">Egyéb</string>
-  <!-- Wi-Fi tethering inactivity timeout -->
-  <string name="hotstpot_inactivity_timeout_text">Wi\u2011Fi hotspot időkorlát</string>
-  <string name="hotstpot_inactivity_timeout_never">Soha</string>
-  <string name="hotstpot_inactivity_timeout_1_minute">1 perc</string>
-  <string name="hotstpot_inactivity_timeout_5_minutes">5 perc</string>
-  <string name="hotstpot_inactivity_timeout_10_minutes">10 perc</string>
-  <string name="hotstpot_inactivity_timeout_never_summary_text">Hordozható Wi\u2011Fi hotspot időkorlát nélkül</string>
-  <string name="hotstpot_inactivity_timeout_summary_text">Hordozható Wi\u2011Fi hotspot időkorlát: <xliff:g id="timeout">%1$s</xliff:g> után</string>
+  <!-- Wi-Fi region code -->
+  <string name="wifi_setting_countrycode_title">Wi\u2011Fi régió kód</string>
+  <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
+  <string name="wifi_setting_countrycode_summary">Wi\u2011Fi régió kód megadása</string>
+  <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
+  <string name="wifi_setting_countrycode_error">Hiba történt a régiókód beállítása közben.</string>
   <!-- Wake on plug -->
   <string name="wake_when_plugged_or_unplugged_title">Felébredés töltő csatlakoztatásakor</string>
   <string name="wake_when_plugged_or_unplugged_summary">A képernyő bekapcsolása a töltő csatlakoztatása/eltávolítása után</string>
@@ -358,6 +354,16 @@
   <string name="crypt_keeper_change_password_summary">Eszköz titkosításhoz használt jelszó módosítása</string>
   <string name="crypt_keeper_choose_your_password_header">Titkosítási jelszó beállítása</string>
   <string name="crypt_keeper_replace_password_title">Titkosítási jelszó módosítása</string>
+  <!-- Tethering & portable hotspot other category -->
+  <string name="tethering_other_category_text">Egyéb</string>
+  <!-- Wi-Fi tethering inactivity timeout -->
+  <string name="hotstpot_inactivity_timeout_text">Wi\u2011Fi hotspot időkorlát</string>
+  <string name="hotstpot_inactivity_timeout_never">Soha</string>
+  <string name="hotstpot_inactivity_timeout_1_minute">1 perc</string>
+  <string name="hotstpot_inactivity_timeout_5_minutes">5 perc</string>
+  <string name="hotstpot_inactivity_timeout_10_minutes">10 perc</string>
+  <string name="hotstpot_inactivity_timeout_never_summary_text">Hordozható Wi\u2011Fi hotspot időkorlát nélkül</string>
+  <string name="hotstpot_inactivity_timeout_summary_text">Hordozható Wi\u2011Fi hotspot időkorlát: <xliff:g id="timeout">%1$s</xliff:g> után</string>
   <!-- Per-app data restrictions -->
   <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
   <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
@@ -369,6 +375,8 @@
   <string name="headset_connect_player_title">Zenelejátszó indítása</string>
   <string name="headset_connect_player_summary">Alapértelmezett zenelejátszó elindítása fülhallgató csatlakoztatásakor</string>
   <!-- Update recovery -->
+  <string name="update_recovery_title">Recovery frissítése</string>
+  <string name="update_recovery_summary">Rendszerfrissítések telepítése közben frissítse a recovery-t</string>
   <string name="update_recovery_on_warning">FIGYELEM: Ha ezen funkció aktiválva van, a telepített recovery le lesz cserélve a jelenleg futó operációs rendszerének megfelelően.\n\nA recovery együtt lesz frissítve a rendszerrel, ezáltal biztosítva a kompatibilitást a jövőbeli verziókkal.\n\nBiztosan aktiválja a funkciót?</string>
   <string name="update_recovery_off_warning">FIGYELEM: Ha ez a funkció ki van kapcsolva, a telepített recovery nem le lesz cserélve a jelenleg futó operációs rendszerének megfelelően.\n\nAz újabb operációs rendszer frissítések lehet, hogy nem támogatják a régi recovery verziókat.\n\nBiztosan inaktiválja a funkciót?</string>
   <!-- Status bar - double tap to sleep -->

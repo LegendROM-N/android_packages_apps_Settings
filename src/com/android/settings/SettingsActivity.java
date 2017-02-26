@@ -22,6 +22,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.ActivityNotFoundException;
+import android.app.ActionBar;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -1156,7 +1157,6 @@ public class SettingsActivity extends SettingsDrawerActivity
                 pm.hasSystemFeature(PackageManager.FEATURE_NFC)
                         && pm.hasSystemFeature(PackageManager.FEATURE_NFC_HOST_CARD_EMULATION)
                         && adapter != null && adapter.isEnabled(), isAdmin, pm);
-
         setTileEnabled(new ComponentName(packageName,
                 Settings.PrintSettingsActivity.class.getName()),
                 pm.hasSystemFeature(PackageManager.FEATURE_PRINTING), isAdmin, pm);
@@ -1193,7 +1193,9 @@ public class SettingsActivity extends SettingsDrawerActivity
 	try {
             phhSupported = (getPackageManager().getPackageInfo("me.phh.superuser", 0).versionCode > 0);
         } catch (PackageManager.NameNotFoundException e) {
-        }
+	}
+                    DevelopmentSettings.PREF_SHOW, android.os.Build.TYPE.equals("eng"))
+                && !um.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES);
         setTileEnabled(new ComponentName(packageName,
                         Settings.SuperUserActivity.class.getName()),
                 phhSupported, isAdmin, pm);

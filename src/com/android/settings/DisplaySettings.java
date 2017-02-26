@@ -93,6 +93,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_NIGHT_DISPLAY = "night_display";
     private static final String KEY_NIGHT_MODE = "night_mode";
     private static final String KEY_CAMERA_GESTURE = "camera_gesture";
+
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
@@ -133,12 +134,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         mScreenTimeoutPreference = (TimeoutListPreference) findPreference(KEY_SCREEN_TIMEOUT);
-
         mFontSizePref = findPreference(KEY_FONT_SIZE);
-
-        if (!NightDisplayController.isAvailable(activity)) {
-            removePreference(KEY_NIGHT_DISPLAY);
-        }
 
         if (displayPrefs != null) {
             mAutoBrightnessPreference = (SwitchPreference) findPreference(KEY_AUTO_BRIGHTNESS);
@@ -148,6 +144,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 } else {
                     displayPrefs.removePreference(mAutoBrightnessPreference);
                 }
+            }
+
+            if (!NightDisplayController.isAvailable(activity)) {
+                removePreference(KEY_NIGHT_DISPLAY);
             }
 
             mLiftToWakePreference = (SwitchPreference) findPreference(KEY_LIFT_TO_WAKE);
@@ -591,6 +591,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     if (!context.getResources().getBoolean(
                             org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake)) {
                         result.add(KEY_PROXIMITY_WAKE);
+                        result.add("proximity_on_wake");
                     }
                     if (!CMHardwareManager.getInstance(context).
                             isSupported(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY)) {
