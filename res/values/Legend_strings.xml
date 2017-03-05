@@ -37,6 +37,7 @@
     <!-- About LegendROM -->
     <string name="lr_about_info">About us</string>
     <string name="lr_about_summary">Our Introduction and our Team</string>
+    <string name="lr_updater_summary">Check for Updates</string>
     <string name="lr_about_info_summary">LegendROM is Lineage based ROM which provides smooth and stock UI/UX with various and only much needed customizations features along with the full Substratum support. The main aim of this ROM is to provide a smooth and lag-free experience out of the box. We will constantly try to add important features and make it even better with every updates.&#35;GetLegendary</string>
     <string name="dev_info">About LegendROM</string>
     <string name="lr_donate">Donate to Development</string>

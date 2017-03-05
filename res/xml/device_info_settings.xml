@@ -37,11 +37,13 @@
                 android:fragment="com.android.settings.LegendROM.Changelog" />
 
         <!-- System update settings - launches activity -->
-        <!-- PreferenceScreen android:key="system_update_settings"
+        <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title"
-                android:summary="@string/system_update_settings_list_item_summary">
-            <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
-        </PreferenceScreen-->
+                android:summary="@string/lr_updater_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.ota.updates"
+                    android:targetClass="com.ota.updates.activities.MainActivity" />
+        </PreferenceScreen>
 
 
         <!-- PreferenceScreen android:key="additional_system_update_settings"
