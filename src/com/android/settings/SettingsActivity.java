@@ -1194,8 +1194,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             phhSupported = (getPackageManager().getPackageInfo("me.phh.superuser", 0).versionCode > 0);
         } catch (PackageManager.NameNotFoundException e) {
 	}
-                    DevelopmentSettings.PREF_SHOW, android.os.Build.TYPE.equals("eng"))
-                && !um.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES);
         setTileEnabled(new ComponentName(packageName,
                         Settings.SuperUserActivity.class.getName()),
                 phhSupported, isAdmin, pm);

@@ -4802,10 +4802,7 @@
   <!-- Message for telling the user the kind of BT device being displayed in list. -->
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <!-- Wifi extension requirement -->
-<<<<<<< HEAD
-=======
   <string name="wifi_advanced_gateway">Gateway</string>
->>>>>>> 9b4a4785b4d1897d4987ae0cf6d14b34fc991cf3
   <!-- Roaming Data Settings -->
   <!-- show security alert for open type end -->
   <string name="tethering_help_dialog_title">یارمەتی</string>

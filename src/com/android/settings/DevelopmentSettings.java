@@ -959,14 +959,11 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateRootAccessOptions();
     }
 
-<<<<<<< HEAD
-=======
     private void resetAdbNotifyOptions() {
         CMSettings.Secure.putInt(getActivity().getContentResolver(),
                 CMSettings.Secure.ADB_NOTIFY, 1);
     }
 
->>>>>>> 9b4a4785b4d1897d4987ae0cf6d14b34fc991cf3
     private void resetRootAccessOptions() {
         String oldValue = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
         SystemProperties.set(ROOT_ACCESS_PROPERTY, "0");
