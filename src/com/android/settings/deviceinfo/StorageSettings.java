@@ -196,7 +196,7 @@ public class StorageSettings extends SettingsPreferenceFragment implements Index
                 // TODO: add actual storage type to record
                 final Drawable icon = context.getDrawable(R.drawable.ic_sim_sd);
                 icon.mutate();
-                icon.setTint(getColorPublic(getResources()));
+	        icon.setTint(COLOR_PUBLIC);
                 icon.setTintMode(PorterDuff.Mode.SRC_ATOP);
 
                 final Preference pref = new Preference(context);
