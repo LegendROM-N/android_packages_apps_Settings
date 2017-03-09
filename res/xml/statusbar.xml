@@ -47,6 +47,13 @@
         android:summary="@string/always_headsup_dialer_summary"
         android:defaultValue="false" />
 
+    <ListPreference
+            android:key="status_bar_weather"
+            android:title="@string/statusbar_weather_title"
+            android:dialogTitle="@string/statusbar_weather_dialog_title"
+            android:entries="@array/status_bar_weather_entries"
+            android:entryValues="@array/status_bar_weather_values" />
+
     <PreferenceCategory
 	android:title="@string/qs_header_category" >
 

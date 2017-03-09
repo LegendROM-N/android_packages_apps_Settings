@@ -13,6 +13,7 @@ import android.content.ContentResolver;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
@@ -27,6 +28,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.chameleonos.SeekBarPreference;
+import com.android.internal.util.Legend.LegendUtils;
 
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -52,6 +54,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String DEFAULT_WEATHER_ICON_PACKAGE = "org.omnirom.omnijaws";
     private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
     private static final String CHRONUS_ICON_PACK_INTENT = "com.dvtonder.chronus.ICON_PACK";
+    private static final String PREF_STATUS_BAR_WEATHER = "status_bar_weather";
 
     private ListPreference mStatusBarWeather;
 
@@ -265,7 +268,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     }
 
     private boolean isOmniJawsServiceInstalled() {
-        return PackageUtils.isAvailableApp(WEATHER_SERVICE_PACKAGE, getActivity());
+        return LegendUtils.isAvailableApp(WEATHER_SERVICE_PACKAGE, getActivity());
     }
 
     private void getAvailableWeatherIconPacks(List<String> entries, List<String> values) {
