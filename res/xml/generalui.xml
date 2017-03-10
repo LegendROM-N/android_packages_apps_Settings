@@ -13,6 +13,12 @@
         android:summaryOff="@string/su_indicator_summary_off"
         android:defaultValue="true" />
 
+    <ListPreference
+            android:key="screenrecord_chord_type"
+            android:title="@string/screen_record_chord_title"
+            android:entries="@array/screen_record_chord_entries"
+            android:entryValues="@array/screen_record_chord_values" />
+
     <!-- Three-fingers-swipe to screenshot -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
