@@ -24,6 +24,11 @@
         android:fragment="com.android.settings.Legend.Ticker"
         android:title="@string/ticker_screen_title" />
 
+    <PreferenceScreen
+        android:key="carrier_label"
+        android:fragment="com.android.settings.Legend.CarrierLabel"
+        android:title="@string/carrierlabel_title"/>
+
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
     	android:key="bluetooth_show_battery"
         android:title="@string/bluetooth_battery_title"
