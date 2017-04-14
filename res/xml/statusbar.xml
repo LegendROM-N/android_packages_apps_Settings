@@ -41,6 +41,12 @@
         android:summary="@string/disable_immersive_message_summary"
         android:persistent="false" />
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="always_headsup_dialer"
+        android:title="@string/always_headsup_dialer_title"
+        android:summary="@string/always_headsup_dialer_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
 	android:title="@string/qs_header_category" >
 
