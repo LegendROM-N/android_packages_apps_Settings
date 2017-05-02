@@ -6,6 +6,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.ContentObserver;
 import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
