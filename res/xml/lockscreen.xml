@@ -24,6 +24,24 @@
         android:summary="@string/keyguard_torch_summary"
         android:defaultValue="false" />
 
+    <com.android.settings.chameleonos.SeekBarPreference
+        android:key="lockscreen_security_alpha"
+        android:title="@string/lockscreen_security_alpha"
+        settings:maximum="100"
+        settings:minimum="0"
+        settings:interval="1"
+        settings:units=""
+        android:persistent="false" />
+
+    <com.android.settings.chameleonos.SeekBarPreference
+        android:key="lockscreen_alpha"
+        android:title="@string/lockscreen_alpha"
+        settings:maximum="100"
+        settings:minimum="0"
+        settings:interval="1"
+        settings:units="%"
+        android:persistent="false" />
+
     <!-- Lockscreen weather -->
     <PreferenceCategory
         android:key="lock_screen_weather_category"
