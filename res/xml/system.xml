@@ -22,6 +22,12 @@
             android:summary="@string/show_cpu_info_summary"/> 
 
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="mtp_dirty_hack"
+            android:title="@string/enable_mtp_dirtyhack_title"
+            android:summary="@string/enable_mtp_dirtyhack_summary"
+            android:defaultValue="true" />
+
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="sensor_block"
             android:title="@string/sensor_block_title"
             android:summary="@string/sensor_block_summary"
