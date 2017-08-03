@@ -24,23 +24,37 @@
     <string name="system_category">System</string>
     <string name="lockscreen_category">LockScreen Settings</string>
 
+
+    <string name="lr_mod_version">LegendROM Detailed version</string>
+    <string name="mod_version_default">Default</string>
+
+    <string name="lr_build_type_title">Build type</string>
+    <string name="lr_build_type_default">Unofficial</string>
+
+    <string name="lr_maintainer_title">Maintainer</string>
+    <string name="lr_maintainer_default">Unknown</string>
+
     <!-- About LegendROM -->
     <string name="lr_about_info">About us</string>
     <string name="lr_about_summary">Our Introduction and our Team</string>
     <string name="lr_about_info_summary">LegendROM is Lineage based ROM which provides smooth and stock UI/UX with various and only much needed customizations features along with the full Substratum support. The main aim of this ROM is to provide a smooth and lag-free experience out of the box. We will constantly try to add important features and make it even better with every updates.&#35;GetLegendary</string>
     <string name="dev_info">About LegendROM</string>
-    <string name="leads">Team Leads</string>
+    <string name="lr_donate">Donate to Development</string>
+    <string name="lr_donate_summary">Show your support to LegendROM</string>
+    <string name="devs">Developers</string>
     <string name="github">Github</string>
     <string name="github_description">View our source code</string>
-    <string name="telegram">Telegram</string>
-    <string name="telegram_description">Join out Telegram discussion group</string>
-    <string name="maintainers">Maintainers</string>
     <string name="dev_1">Yashraj Jhala &#40;jhalayashraj&#41;</string>
-    <string name="dev1_description">Lead Developer, Bacon,Oneplus 3-3T,Cheeseburger Maintainer</string>
+    <string name="dev1_description">● Head developer \n● Maintainer</string>
     <string name="dev_2">Pranav Thombare &#40;pranavthombare&#41;</string>
-    <string name="dev2_description">Lead Developer, Oneplus 2,Onyx Maintainer</string>
-    <string name="dev_3">Arjun &#40;arjun921&#41;</string>
-    <string name="dev3_description">Mido Maintainer</string>
+    <string name="dev2_description">● Head developer \n● Maintainer</string>
+    <string name="maintainer_categorie_title">Official Devices</string>
+    <string name="dev_categorie_title">Developer &amp; Maintainer</string>
+
+    <string name="device_maintainers_title">Devices and maintainers</string>
+    <string name="device_maintainers_title_summary">List of devices and their LegendROM maintainers</string>
+    <string name="maintainers_note_title">Note</string>
+    <string name="maintainers_note_title_summary">Send a PM to \'Yashraj Jhala\' at Hangouts containing the link to your ROM thread if you want your name to be added in Device Maintainers list.</string>
 
     <!-- General -->
     <string name="ok">Okay</string>

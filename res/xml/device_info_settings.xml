@@ -33,19 +33,19 @@
                 android:fragment="com.android.settings.LegendROM.Changelog" />
 
         <!-- System update settings - launches activity -->
-        <PreferenceScreen android:key="system_update_settings"
+        <!-- PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title"
                 android:summary="@string/system_update_settings_list_item_summary">
             <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
-        </PreferenceScreen>
+        </PreferenceScreen-->
 
 
-        <PreferenceScreen android:key="additional_system_update_settings"
+        <!-- PreferenceScreen android:key="additional_system_update_settings"
                           android:title="@string/additional_system_update_settings_list_item_title">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="@string/additional_system_update"
                     android:targetClass="@string/additional_system_update_menu" />
-        </PreferenceScreen>
+        </PreferenceScreen-->
 
         <!-- LineageOS Updates -->
         <cyanogenmod.preference.SelfRemovingPreference android:key="cm_updates"
@@ -99,6 +99,20 @@
         <org.cyanogenmod.internal.cmparts.CMPartsPreference
                 android:key="contributors" />
 
+	<!-- Detailed build version -->
+        <Preference android:key="lr_build_type"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/lr_build_type_title"
+                android:summary="@string/lr_build_type_default"/>
+
+	<!-- Detailed build version -->
+        <Preference android:key="lr_maintainer"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/lr_maintainer_title"
+                android:summary="@string/lr_maintainer_default"/>
+
         <!-- Device name -->
         <Preference android:key="device_name"
                 android:enabled="false"
@@ -132,10 +146,9 @@
 
         <!-- Mod version -->
         <Preference android:key="mod_version"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/mod_version"
-                android:summary="@string/mod_version_default" />
+		style="?android:preferenceInformationStyle"
+		android:title="@string/lr_mod_version"
+		android:summary="@string/mod_version_default" />
 
         <!-- CyanogenMod API Version -->
         <com.android.settings.DividerPreference

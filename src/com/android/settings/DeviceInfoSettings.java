@@ -63,6 +63,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
+    private static final String KEY_BUILD_TYPE = "lr_build_type";
+    private static final String KEY_MAINTAINER = "lr_maintainer";
     private static final String KEY_DEVICE_MODEL = "device_model";
     private static final String KEY_DEVICE_NAME = "device_name";
     private static final String KEY_SELINUX_STATUS = "selinux_status";
@@ -131,7 +133,15 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setValueSummary(KEY_EQUIPMENT_ID, PROPERTY_EQUIPMENT_ID);
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
+	setValueSummary(KEY_BUILD_TYPE, "lr.build.type");
+	setValueSummary(KEY_MAINTAINER, "ro.build.user");
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
+	findPreference(KEY_MAINTAINER).setEnabled(true);
+
+	String buildtype = SystemProperties.get("lr.build.type","unofficial");
+	if (buildtype.equalsIgnoreCase("unofficial")) {
+	removePreference(KEY_MAINTAINER);
+	}
         //setValueSummary(KEY_QGP_VERSION, PROPERTY_QGP_VERSION);
         // Remove QGP Version if property is not present
         //removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_QGP_VERSION,
@@ -148,9 +158,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         if(mMbnVersion == null){
             getPreferenceScreen().removePreference(findPreference(KEY_MBN_VERSION));
         }
-        findPreference(KEY_MOD_VERSION).setSummary(
-                cyanogenmod.os.Build.CYANOGENMOD_DISPLAY_VERSION);
+	setValueSummary(KEY_MOD_VERSION, "ro.modversion");
         findPreference(KEY_MOD_VERSION).setEnabled(true);
+	findPreference(KEY_BUILD_TYPE).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
         setValueSummary(KEY_LEGENDROM_VERSION, "ro.legendrom.version");
         findPreference(KEY_LEGENDROM_VERSION).setEnabled(true);
@@ -335,6 +345,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                         + "queryIntentActivities() returns empty" );
                 return true;
             }
+	} else if (preference.getKey().equals(KEY_BUILD_TYPE)) {
+	    sendFeedback();
         } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
             sendFeedback();
         } else if(preference.getKey().equals(KEY_SYSTEM_UPDATE_SETTINGS)) {

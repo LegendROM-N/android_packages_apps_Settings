@@ -16,66 +16,65 @@ implied.
 xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/lr_about_info">
 
-<PreferenceCategory
+	<PreferenceCategory
               android:key="about"
               android:title="@string/dev_info" >
 
         <PreferenceScreen
             android:title="@string/github"
-    android:summary="@string/github_description"
-    android:icon="@drawable/ic_github" >
-    <intent
+    	    android:summary="@string/github_description"
+    	    android:icon="@drawable/ic_github" >
+    	<intent
                android:action="android.intent.action.VIEW"
                android:data="https://github.com/LegendROM-N" />
         </PreferenceScreen>
 
-        <PreferenceScreen
-            android:title="@string/telegram"
-    android:summary="@string/telegram_description"
-    android:icon="@drawable/ic_telegram" >
-    <intent
-               android:action="android.intent.action.VIEW"
-               android:data="https://telegram.me/LegendROM" />
-        </PreferenceScreen>
+	<PreferenceScreen
+		android:icon="@drawable/lr_donate_icon"
+		android:title="@string/lr_donate"
+		android:summary="@string/lr_donate_summary" >
+	<intent
+	       android:action="android.intent.action.VIEW"
+	       android:data="https://forum.xda-developers.com/donatetome.php?u=6164562" />
 
-     </PreferenceCategory>
+	</PreferenceScreen>
 
-<PreferenceCategory
-              android:key="leads"
-              android:title="@string/leads" >
+        </PreferenceCategory>
+
+	<PreferenceCategory
+		android:key="maintainer_categorie"
+		android:title="@string/maintainer_categorie_title">
+					
+ 	   <PreferenceScreen
+        	android:key="maintainers"
+		android:icon="@drawable/lr_maintainers_icon"
+        	android:fragment="com.android.settings.Legend.DeviceMaintainersFragment"
+        	android:summary="@string/device_maintainers_title_summary"
+        	android:title="@string/device_maintainers_title" />
+                 	
+	</PreferenceCategory>
+
+	<PreferenceCategory
+              android:key="devs"
+              android:title="@string/dev_categorie_title" >
 
         <PreferenceScreen
             android:title="@string/dev_1"
-    android:summary="@string/dev1_description"
-    android:icon="@drawable/ic_devs" >
-    <intent
-               android:action="android.intent.action.VIEW"
-               android:data="https://plus.google.com/+YashrajJhala" />
+    	    android:summary="@string/dev1_description"
+    	    android:icon="@drawable/ic_devs" >
+    	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://plus.google.com/+YashrajJhala" />
         </PreferenceScreen>
 
        <PreferenceScreen
             android:title="@string/dev_2"
-    android:summary="@string/dev2_description"
-    android:icon="@drawable/ic_devs" >
-    <intent
-               android:action="android.intent.action.VIEW"
-               android:data="https://plus.google.com/105721619019496592081" />
+    	    android:summary="@string/dev2_description"
+    	    android:icon="@drawable/ic_devs" >
+    	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://plus.google.com/105721619019496592081" />
         </PreferenceScreen>
-
-</PreferenceCategory>
-
-<PreferenceCategory
-              android:key="maintainers"
-              android:title="@string/maintainers" >
-
-       <PreferenceScreen
-            android:title="@string/dev_3"
-    android:summary="@string/dev3_description"
-    android:icon="@drawable/ic_devs_phone">
-    <intent
-               android:action="android.intent.action.VIEW"
-               android:data="https://forum.xda-developers.com/member.php?u=4523113" />
-      </PreferenceScreen>
 
 </PreferenceCategory>
 
