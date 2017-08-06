@@ -33,6 +33,9 @@
 	
 	<string name="device_oneplusx">OnePlus X</string>
 	<string name="device_oneplusx_summary">Onyx \nMaintainer - Pranav Thombare</string>
+
+	<string name="device_oneplus5">OnePlus 5</string>
+	<string name="device_oneplus5_summary">Cheeseburger \nMaintainer - Yashraj Jhala</string>
 	
 	<string name="device_mido">Xiaomi Redmi Note 4</string>
 	<string name="device_mido_summary">mido\nMaintainer - Arjun</string>

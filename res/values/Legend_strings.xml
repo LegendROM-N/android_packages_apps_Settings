@@ -48,6 +48,11 @@
     <string name="dev1_description">● Head developer \n● Maintainer</string>
     <string name="dev_2">Pranav Thombare &#40;pranavthombare&#41;</string>
     <string name="dev2_description">● Head developer \n● Maintainer</string>
+    <string name="designers">Designers</string>
+    <string name="des_1">Meet Baxi</string>
+    <string name="des1_description">● Wallpapers \n● Banners</string>
+    <string name="des_2">Prantik Majumder</string>
+    <string name="des2_description">● ROM Logo \n● App Icons</string>
     <string name="maintainer_categorie_title">Official Devices</string>
     <string name="dev_categorie_title">Developer &amp; Maintainer</string>
 
