@@ -251,16 +251,16 @@
     <string name="blur_cat_notice_summary">Blur personlizations are disabled during Keyguard view! Only Translucent Notifications are enabled!</string>
 
     <!-- Color picker -->
-	<string name="color_picker_fragment_title">Color Picker</string>
+    <string name="color_picker_fragment_title">Color Picker</string>
     <string name="apply_color_title">Apply color</string>
-	<string name="edit_hex_title">HEX value</string>
-	<string name="palette_title">Others</string>
-	<string name="palette_material_title">Material</string>
-	<string name="palette_rgb_title">RGB</string>
-	<string name="reset_color_title">Reset</string>
-	<string name="reset_android_title">Android default</string>
-	<string name="reset_title">LegendROM default</string>
-	<string name="reset_theme_default_title">Theme default</string>
+    <string name="edit_hex_title">HEX value</string>
+    <string name="palette_title">Others</string>
+    <string name="palette_material_title">Material</string>
+    <string name="palette_rgb_title">RGB</string>
+    <string name="reset_color_title">Reset</string>
+    <string name="reset_android_title">Android default</string>
+    <string name="reset_title">LegendROM default</string>
+    <string name="reset_theme_default_title">Theme default</string>
     <string name="favorites_title">Favorites</string>
     <string name="hide_favorites_title">Hide favorites</string>
     <string name="show_favorites_title">Show favorites</string>
@@ -453,7 +453,6 @@
     <string name="lockscreen_alpha">Lockscreen alpha</string>
     <string name="lockscreen_security_alpha">Lockscreen bouncer alpha</string>
 
-
     <!-- Custom carrier label and position -->
     <string name="carrierlabel_title">Carrier Label</string>
     <string name="carrier_label_settings_title">Carrier Label</string>
@@ -471,5 +470,8 @@
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
 	
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Sensor block per-package</string>
+    <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery.</string>
 
 </resources>
