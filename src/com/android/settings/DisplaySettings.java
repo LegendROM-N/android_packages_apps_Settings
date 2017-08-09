@@ -301,7 +301,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             final int accentColorValue = Settings.Secure.getInt(getContext().getContentResolver(),
                     Settings.Secure.THEME_ACCENT_COLOR, 3);
             final int primaryColorValue = Settings.Secure.getInt(getContext().getContentResolver(),
-                    Settings.Secure.THEME_PRIMARY_COLOR, 2);
+                    Settings.Secure.THEME_PRIMARY_COLOR, 0);
             mThemePreference.setSummary(PreviewSeekBarPreferenceFragment.getInfoText(getContext(),
                     false, accentColorValue, primaryColorValue) + ", " +
                     PreviewSeekBarPreferenceFragment.getInfoText(getContext(), true,
@@ -440,7 +440,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             final int accentColorValue = Settings.Secure.getInt(getContext().getContentResolver(),
                     Settings.Secure.THEME_ACCENT_COLOR, 3);
             final int primaryColorValue = Settings.Secure.getInt(getContext().getContentResolver(),
-                    Settings.Secure.THEME_PRIMARY_COLOR, 2);
+                    Settings.Secure.THEME_PRIMARY_COLOR, 0);
             mThemePreference.setSummary(PreviewSeekBarPreferenceFragment.getInfoText(getContext(),
                     false, accentColorValue, primaryColorValue) + ", " +
                     PreviewSeekBarPreferenceFragment.getInfoText(getContext(), true,
@@ -519,7 +519,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             final int accentColorValue = Settings.Secure.getInt(getContext().getContentResolver(),
                     Settings.Secure.THEME_ACCENT_COLOR, 3);
             final int primaryColorValue = Settings.Secure.getInt(getContext().getContentResolver(),
-                    Settings.Secure.THEME_PRIMARY_COLOR, 2);
+                    Settings.Secure.THEME_PRIMARY_COLOR, 0);
             mThemePreference.setSummary(PreviewSeekBarPreferenceFragment.getInfoText(getContext(),
                     false, accentColorValue, primaryColorValue) + ", " +
                     PreviewSeekBarPreferenceFragment.getInfoText(getContext(), true,
