@@ -58,6 +58,10 @@ public class ColorPickerPreference extends Preference implements
 
     private ColorPickerFragment mPickerFragment;
 
+    private PreferenceViewHolder mView;
+    private ColorPickerFragment mDialog;
+    private LinearLayout widgetFrameView;
+
     private final Resources mResources;
     private int mDefaultValue = Color.BLACK;
     private int mResetColor1 = Color.TRANSPARENT;
@@ -66,6 +70,13 @@ public class ColorPickerPreference extends Preference implements
     private String mResetColor2Title = null;
     private int mValue;
     private boolean mAlphaSliderVisible = true;
+
+    // if android:defaultValue is not set, button is not enabled
+    private static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";
+    private static final int DEF_VALUE_DEFAULT = -6;
+    private static final int DEF_VALUE_DEFAULT_CHECK = -7; // != DEF_VALUE_DEFAULT
+    private boolean mUsesDefaultButton = false;
+    private int mDefValue = -1;
 
     public ColorPickerPreference(Context context) {
         this(context, null);

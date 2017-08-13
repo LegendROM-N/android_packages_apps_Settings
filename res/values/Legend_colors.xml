@@ -45,4 +45,8 @@
     <color name="color_picker_help_screen_background">#e0000000</color>
     <color name="color_picker_help_summary_text_color">#b3ffffff</color>
 
+    <!-- Color engine -->
+    <color name="pixel_primary_color">#242424</color>
+    <color name="pixel_secondary_color">#3a3a3a</color>
+
 </resources>
