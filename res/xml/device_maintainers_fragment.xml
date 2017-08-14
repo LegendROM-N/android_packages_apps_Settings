@@ -26,21 +26,21 @@
         android:selectable="false" 
         android:title="@string/device_oneplus2" />         
         
-   <Preference
+    <Preference
 	android:id="@+id/device_oneplusx"
         android:icon="@drawable/phone_tint"
         android:summary="@string/device_oneplusx_summary"
         android:selectable="false" 
         android:title="@string/device_oneplusx" />
    
-   <Preference
+    <Preference
 	android:id="@+id/device_oneplus3"
         android:icon="@drawable/phone_tint"
         android:summary="@string/device_oneplus3_summary"
         android:selectable="false" 
         android:title="@string/device_oneplus3" />  
 
-   <Preference
+    <Preference
 	android:id="@+id/device_oneplus5"
         android:icon="@drawable/phone_tint"
         android:summary="@string/device_oneplus5_summary"
@@ -49,16 +49,29 @@
         
     </PreferenceCategory>
        
-   <PreferenceCategory
-       android:id="@+id/device_category_xiaomi"
-       android:title="@string/device_category_xiaomi_title" >
+    <PreferenceCategory
+        android:id="@+id/device_category_xiaomi"
+        android:title="@string/device_category_xiaomi_title" >
         
-   <Preference
-       android:id="@+id/device_mido"
-       android:icon="@drawable/phone_tint"
-       android:summary="@string/device_mido_summary"
-       android:selectable="false" 
-       android:title="@string/device_mido" />
-   </PreferenceCategory>
+    <Preference
+        android:id="@+id/device_mido"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_mido_summary"
+        android:selectable="false" 
+        android:title="@string/device_mido" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:id="@+id/device_category_lg"
+        android:title="@string/device_category_lg_title" >
+
+    <Preference
+        android:id="@+id/device_n5"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_n5_summary"
+        android:selectable="false"
+        android:title="@string/device_n5" />	
+
+    </PreferenceCategory>
 </PreferenceScreen> 
