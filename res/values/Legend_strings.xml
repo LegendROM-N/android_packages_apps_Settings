@@ -399,18 +399,6 @@
     <string name="always_headsup_dialer_title">Force heads up for dialer</string>
     <string name="always_headsup_dialer_summary">Show heads up for dialer even if heads up is off to avoid fullscreen dialer on incoming calls</string>
 
-    <!-- Sound & display settings screen, setting option name to change the user interface theme [CHAR LIMIT=30] -->
-    <string name="night_mode_title">Theme</string>
-    <!-- Sound & display settings screen, setting option summary to change the user interface theme [CHAR LIMIT=100] -->
-    <string name="night_mode_summary">%s</string>
-    <!-- Sound & display settings screen, theme setting value to prefer a light-colored user interface [CHAR LIMIT=30] -->
-    <string name="night_mode_no">Light</string>
-    <!-- Sound & display settings screen, theme setting value to prefer a dark-colored user interface [CHAR LIMIT=30] -->
-    <string name="night_mode_yes">Dark</string>
-    <!-- Sound & display settings screen, theme setting value to automatically switch between a light- or dark-colored user interface [CHAR LIMIT=30] -->
-    <string name="night_mode_auto">Automatic</string>
-    <string name="keywords_display_night_mode">dark theme night mode dim screen invert brightness</string>
-
     <string name="weather_title">Weather</string>
     <string name="weather_config_title">Service settings</string>
     <string name="weather_config_summary"></string>
