@@ -171,6 +171,10 @@
     <string name="keyguard_torch_title">Lockscreen torch</string>
     <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
 
+    <!-- Media art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
     <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
