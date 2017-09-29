@@ -70,8 +70,8 @@
     </PreferenceCategory>
     
 	<PreferenceCategory
-        android:id="@+id/device_category_LeEco"
-        android:title="@string/device_category_LeEcotitle" >
+        android:id="@+id/device_category_leeco"
+        android:title="@string/device_category_leeco_title" >
 
     <Preference
         android:id="@+id/device_leeco_x3"
