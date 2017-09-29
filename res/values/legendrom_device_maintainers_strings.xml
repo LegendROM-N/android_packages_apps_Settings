@@ -22,6 +22,7 @@
 	<string name="device_category_oneplus_title">ONEPLUS</string>
 	<string name="device_category_xiaomi_title">XIAOMI</string>
 	<string name="device_category_lg_title">LG</string>
+	<string name="device_category_leeco_title">LeEco</string>	
 
 	<string name="device_oneplus">OnePlus One</string>
 	<string name="device_oneplus_summary">Bacon \nMaintainer - Yashraj Jhala</string>
@@ -43,6 +44,9 @@
   		
 	<string name="device_mido">Xiaomi Redmi Note 4</string>
 	<string name="device_mido_summary">mido \nMaintainer - Arjun Sunil</string>
+	
+	<string name="device_leeco_x3">LeEco Le1s</string>
+	<string name="device_leeco_x3_summary">leeco_x3 \nMaintainer - VenkatVV</string>
 
 	<string name="device_n5">Nexus 5</string>
         <string name="device_n5_summary">Hammerhead \nMaintainer - Xaif</string>
