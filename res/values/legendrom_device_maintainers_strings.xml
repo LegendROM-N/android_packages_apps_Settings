@@ -22,6 +22,7 @@
 	<string name="device_category_oneplus_title">ONEPLUS</string>
 	<string name="device_category_xiaomi_title">XIAOMI</string>
 	<string name="device_category_lg_title">LG</string>
+	<string name="device_category_leeco_title">LeEco</string>	
 
 	<string name="device_oneplus">OnePlus One</string>
 	<string name="device_oneplus_summary">Bacon \nMaintainer - Yashraj Jhala</string>
