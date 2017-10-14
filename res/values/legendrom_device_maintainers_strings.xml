@@ -54,4 +54,7 @@
 
         <string name="device_kuntao">Lenovo P2</string>
         <string name="device_kuntao_summary">kuntao \nMaintainer - Abhay Ruparel</string>
+	
+	<string name="device_land">Xiaomi Redmi 3S</string>
+	<string name="device_land_summary">land \nMaintainer - Akshat Sinha</string>
 </resources>
