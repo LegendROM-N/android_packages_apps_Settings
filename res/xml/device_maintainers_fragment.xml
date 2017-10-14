@@ -93,9 +93,9 @@
         android:selectable="false"
         android:title="@string/device_n5" />	
       
-	</PreferenceCategory>
+    </PreferenceCategory>
 	
-     <PreferenceCategory
+    <PreferenceCategory
         android:id="@+id/device_category_lenovo"
         android:title="@string/device_category_lenovo_title" >
 
