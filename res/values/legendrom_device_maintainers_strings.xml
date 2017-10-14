@@ -51,4 +51,6 @@
 	<string name="device_n5">Nexus 5</string>
         <string name="device_n5_summary">Hammerhead \nMaintainer - Xaif</string>
 
+        <string name="device_kuntao">Lenovo P2</string>
+        <string name="device_kuntao_summary">kuntao \nMaintainer - Abhay Ruparel</string>
 </resources>
