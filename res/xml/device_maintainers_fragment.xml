@@ -66,6 +66,13 @@
         android:summary="@string/device_mido_summary"
         android:selectable="false" 
         android:title="@string/device_mido" />
+	   
+    <Preference
+        android:id="@+id/device_land"
+        android:icon="@drawable/phone_tint"
+        android:summary="@string/device_land_summary"
+        android:selectable="false"
+        android:title="@string/device_land" />
 
     </PreferenceCategory>
     
@@ -105,13 +112,6 @@
         android:summary="@string/device_kuntao_summary"
         android:selectable="false"
         android:title="@string/device_kuntao" />
-	    
-    <Preference
-        android:id="@+id/device_land"
-        android:icon="@drawable/phone_tint"
-        android:summary="@string/device_land_summary"
-        android:selectable="false"
-        android:title="@string/device_land" />
 
     </PreferenceCategory>
 </PreferenceScreen> 
