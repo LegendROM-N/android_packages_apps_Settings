@@ -40,6 +40,9 @@
 	<string name="device_oneplus5">OnePlus 5</string>
 	<string name="device_oneplus5_summary">Cheeseburger \nMaintainer - Yashraj Jhala</string>
 	
+	<string name="device_oneplus5">OnePlus 5T</string>
+	<string name="device_oneplus5_summary">Dumpling \nMaintainer - Pranav Thombare</string>
+	
 	<string name="device_santoni">Xiaomi Redmi 4X</string>
   	<string name="device_santoni_summary">santoni \nMaintainer - Abhiraj Singh</string>
   		
